@@ -1,9 +1,9 @@
 #include "./util.cpp"
 
-void sawUp(byte* state) {
-  state[1] = increaseCurrentPosition(1, true, state);
+void sawUp(uint8_t* state) {
+  increaseCurrentPosition(1, true, state);
 }
 
-void sawDown(byte* state) {
-  state[1] = decreaseCurrentPosition(1, true, state);
+void sawDown(uint8_t* state) {
+  decreaseCurrentPosition(1, true, state);
 }

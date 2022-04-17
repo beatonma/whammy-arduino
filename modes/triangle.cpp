@@ -1,8 +1,9 @@
+#include <stdint.h>
 #include "./util.cpp"
 
 boolean _direction = 1;
 
-void triangle(byte* state) {
+void triangle(uint8_t* state) {
   if (_direction) {
     increaseCurrentPosition(1, false, state);
     if (state[1] == 127) {
@@ -15,7 +16,4 @@ void triangle(byte* state) {
       _direction = !_direction;
     }
   }
-//   Serial.println(state[0]);
-//   Serial.println(state[1]);
-//   Serial.println("triangle");
 }
