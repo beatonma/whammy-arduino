@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include "./modes/modes.h"
+
 
 const byte COMMAND_PATCH_CHANGE = B11000000;
 const byte COMMAND_CC_CHANGE = B10110000;
@@ -56,7 +58,7 @@ const byte MODE_SQUARE = 4;
 const byte MODE_SEQUENCER = 5;
 const byte MODE_CHAOS = 6;
 
-const byte DEFAULT_MODE = MODE_SQUARE;
+const byte DEFAULT_MODE = MODE_SAW_UP;
 const byte DEFAULT_PATCH = PATCH_WHAMMY_PLUS_ONE;
 const byte DEFAULT_POSITION = 0;
 
@@ -109,21 +111,28 @@ byte positionSequence[SEQUENCE_LENGTH] = {
 };
 byte sequenceIndex = 0;
 
+boolean active = true;
 byte currentMode = DEFAULT_MODE;
-byte currentPatch = DEFAULT_PATCH;
-byte currentPosition = DEFAULT_POSITION;
-boolean direction = 1;
-byte currentState[2] = {currentPatch, currentPosition};
+// boolean direction = 1;
+byte currentState[2] = {DEFAULT_PATCH, DEFAULT_POSITION};
 
 void setup() {
   Serial.begin(31250);
+
+  if (active) {
+    applyState();
+  }
 }
 
 void loop() {
-  // setPatch(randomPatch());
-  // setPosition(randomPosition());
+  // if (active) {
+    runMode();
+  // }
+}
 
-  runMode();
+void applyState() {
+  setPatch(currentState[0]);
+  setPosition(currentState[1]);
 }
 
 void runMode() {
@@ -131,31 +140,35 @@ void runMode() {
     case MODE_RANDOM_POSITION:
       break;
     case MODE_SAW_UP:
-      sawUp();
+      sawUp(currentState);
       break;
     case MODE_SAW_DOWN:
-      sawDown();
+      sawDown(currentState);
       break;
     case MODE_TRIANGLE:
-      triangle();
+      Serial.println("TRIANGLE");
+      triangle(currentState);
       break;
-    case MODE_SQUARE:
-      square();
-      break;
-    case MODE_CHAOS:
-      chaos();
-      break;
+    // case MODE_SQUARE:
+    //   square();
+    //   break;
+    // case MODE_CHAOS:
+    //   chaos();
+    //   break;
   }
+
+  applyState();
+  delay(100);
 }
 
 void setPatch(byte patchID) {
-  currentPatch = patchID;
+  // currentPatch = patchID;
   Serial.write(COMMAND_PATCH_CHANGE);
   Serial.write(PATCHES[patchID]);
 }
 
 void setPosition(byte position) {
-  currentPosition = position;
+  // currentPosition = position;
   Serial.write(COMMAND_CC_CHANGE);
   Serial.write(CC_PEDAL_POSITION);
   Serial.write(position);
@@ -169,81 +182,81 @@ void scheduleNext(int _delay) {
   delay(_delay);
 }
 
-byte randomPatch() {
-  if (random(100) > 60) {
-    return PATCHES[random(0, NUM_PATCHES)];
-  }
-  else {
-    return currentPatch;
-  }
-}
+// byte randomPatch() {
+//   if (random(100) > 60) {
+//     return PATCHES[random(0, NUM_PATCHES)];
+//   }
+//   else {
+//     return currentPatch;
+//   }
+// }
 
-byte randomPosition() {
-  if (random(100) > 60) {
-    return random(0, 127);
-  }
-  else {
-    // Sometimes stay at same position.
-    return currentPosition;
-  }
-}
+// byte randomPosition() {
+//   if (random(100) > 60) {
+//     return random(0, 127);
+//   }
+//   else {
+//     // Sometimes stay at same position.
+//     return currentPosition;
+//   }
+// }
 
-void sawUp() {
-  increasecurrentPosition(1, true);
-  scheduleNext();
-}
+// void sawUp() {
+//   increaseCurrentPosition(1, true);
+//   scheduleNext();
+// }
 
-void sawDown() {
-  decreasecurrentPosition(1, true);
-  scheduleNext();
-}
+// void sawDown() {
+//   decreasecurrentPosition(1, true);
+//   scheduleNext();
+// }
 
-void triangle() {
-  if (direction) {
-    increasecurrentPosition(1, false);
-    if (currentPosition == 127) {
-      direction = !direction;
-    }
-  }
-  else {
-    decreasecurrentPosition(1, false);
-    if (currentPosition == 0) {
-      direction = !direction;
-    }
-  }
-  scheduleNext();
-}
+// void triangle() {
+//   if (direction) {
+//     increaseCurrentPosition(1, false);
+//     if (currentPosition == 127) {
+//       direction = !direction;
+//     }
+//   }
+//   else {
+//     decreasecurrentPosition(1, false);
+//     if (currentPosition == 0) {
+//       direction = !direction;
+//     }
+//   }
+//   scheduleNext();
+// }
 
-void square() {
-  sequencePosition(positionSequence);
-  scheduleNext(500);
-}
+// void square() {
+//   sequencePosition(positionSequence);
+//   scheduleNext(500);
+// }
 
-void chaos() {
-  setPosition(randomPosition());
-  setPatch(randomPatch());
-  scheduleNext();
-}
+// void chaos() {
+//   setPosition(randomPosition());
+//   setPatch(randomPatch());
+//   scheduleNext();
+// }
 
-void mapOfTheProblematique() {
-  // TODO
-}
+// void mapOfTheProblematique() {
+//   // TODO
+// }
 
-void sequencePosition(byte positions[]) {
-  setPosition(positions[sequenceIndex]);
-  sequenceIndex = (sequenceIndex + 1) % SEQUENCE_LENGTH;
-}
+// void sequencePosition(byte positions[]) {
+//   setPosition(positions[sequenceIndex]);
+//   sequenceIndex = (sequenceIndex + 1) % SEQUENCE_LENGTH;
+// }
 
-void increasecurrentPosition(int delta, boolean wrap) {
-  if (wrap) {
-    setPosition((currentPosition + delta) % 128);
-  }
-  else {
-    int result = currentPosition + delta;
-    setPosition(max(0, min(127, result)));
-  }
-}
+// void increaseCurrentPosition(int delta, boolean wrap) {
+//   if (wrap) {
+//     setPosition((currentPosition + delta) % 128);
+//   }
+//   else {
+//     int result = currentPosition + delta;
+//     setPosition(max(0, min(127, result)));
+//   }
+// }
 
-void decreasecurrentPosition(int delta, boolean wrap) {
-  return increasecurrentPosition(-delta, wrap);
-}
+// void decreasecurrentPosition(int delta, boolean wrap) {
+//   return increaseCurrentPosition(-delta, wrap);
+// }
