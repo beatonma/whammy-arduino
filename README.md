@@ -15,6 +15,15 @@ The implementation currently provides these modes:
 - Various randomisers.
 
 
+### Hardware
+- Arduino Nano clone
+- 3 momentary buttons
+- One linear potentiometer
+- MIDI port
+- LED
+- A few resistors, wire, case, etc.
+
+
 ### monitor.pd
 If you want to work on this project without going mad from constant
 atonal wee-woo noises, open `monitor.pd` with
@@ -23,5 +32,6 @@ MIDI messages instead.
 
 <img src="https://user-images.githubusercontent.com/12682046/164093582-a64960d4-7681-49a6-aa1f-fbc980e40858.png" width="300" alt="Visualisation with Pure Data" />
 
+----
 
-This is what I did while isolating with Covid 19, April 2022. The illness provided some headaches and this project did not help with that whatsoever. Fun though.
+This project kept me busy while isolating with Covid 19 in April 2022. The illness provided some gnarly headaches and this project did not help with that whatsoever. Fun though.
