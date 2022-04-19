@@ -1,52 +1,38 @@
 #include <stdint.h>
 #include "./util.cpp"
 #include <math.h>
+#include "../frame/frame.h"
+#include "../tempo/tempo.h"
+#include "../pedal/pedal.h"
 
-// bool direction_ = 1;
-// unsigned long timestamp_ = 0;  // Current time
-// unsigned long previousTimestamp_ = 0;
-// unsigned long timeDelta_ = 0;
-// unsigned long tempoMillis_ = 1;
-// double delta_ = 0;
-// double result_;
 
-void triangle(uint8_t* state, unsigned int tempo) {
-  // timestamp_ = millis();
-  // tempoMillis_ = tempoToPulseDelay(tempo);
+namespace Triangle {
 
-  // timeDelta_ = timestamp_ - previousTimestamp_;
+  namespace {
+    double delta;
+    double result;
+    bool direction = true;
+  }
 
-  // // Ramp up and down each beat -> delta uses half of tempoMillis.
-  // delta_ = (double) timeDelta_ / (0.5 * tempoMillis_) * 127.0;
-  // if (direction_) {
-  //   result_ = state[1] + delta_;
-  //   if (result_ > 127) {
-  //     result_ = 127 - (result_ - 127);
-  //     direction_ = !direction_;
-  //   }
-  // }
-  // else {
-  //   result_ = state[1] - delta_;
-  //   if (result_ < 0) {
-  //     result_ = -result_;
-  //     direction_ = !direction_;
-  //   }
-  // }
-  // state[1] = round(result_);
+  void triangle() {
+    delta = (Frame::getFrameTime() / Tempo::getPulseMillis()) * 255.0;
 
-  // if (timestamp_ >= eventTimestamp_ + tempoMillis_) {
-  //   if (direction_) {
-  //     increaseCurrentPosition(1, false, state);
-  //     if (state[1] == 127) {
-  //       direction_ = !direction_;
-  //     }
-  //   }
-  //   else {
-  //     decreaseCurrentPosition(1, false, state);
-  //     if (state[1] == 0) {
-  //       direction_ = !direction_;
-  //     }
-  //   }
-  //   eventTimestamp_ = timestamp_;
-  // }
+    if (direction) {
+      result = Pedal::getPosition() + delta;
+      if (result > 127.0) {
+        // bounce back from limit.
+        result = 127.0 - (result - 127.0);
+        direction = !direction;
+      }
+    }
+    else {
+      result = Pedal::getPosition() - delta;
+      if (result < 0) {
+        // bounce back from limit.
+        result = -result;
+        direction = !direction;
+      }
+    }
+    Pedal::setPosition(result);
+  }
 }

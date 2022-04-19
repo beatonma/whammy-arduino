@@ -10,9 +10,9 @@
 #define MODE_CHAOS 6
 
 const uint8_t MODES[] = {
+  MODE_TRIANGLE,
   MODE_SAW_UP,
   MODE_SAW_DOWN,
-  // MODE_TRIANGLE
 };
 const uint8_t NUM_MODES = sizeof(MODES);
 
