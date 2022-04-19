@@ -1,3 +1,4 @@
 .vscode/
 *.gitbundle
 scratch
+scratch.cpp

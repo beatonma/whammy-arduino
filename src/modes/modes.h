@@ -16,7 +16,7 @@ const uint8_t MODES[] = {
 };
 const uint8_t NUM_MODES = sizeof(MODES);
 
-void runMode(uint8_t* state);
+void runMode();
 void nextMode();
 
 #endif

@@ -3,7 +3,7 @@
 
 namespace LED {
   void setLedBrightness(uint8_t brightness);
-  void setLed(boolean on);
+  void setLed(bool on);
   void ledOn();
   void ledOff();
   void fade();

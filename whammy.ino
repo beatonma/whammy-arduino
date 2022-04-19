@@ -1,13 +1,11 @@
 #include <Arduino.h>
 #include "./config.h"
 #include "./src/led/led.h"
-// #include "./src/led/led.cpp"
 #include "./src/modes/modes.h"
-// #include "./src/modes/modes.cpp"
 #include "./src/pedal/pedal.h"
-#include "./src/inputs.h"
 #include "./src/tempo/tempo.h"
 #include "./src/frame/frame.h"
+#include "./src/inputs.h"
 
 
 OnOffButtonHandler _onOffButton(PIN_BUTTON_ON_OFF);
@@ -17,9 +15,7 @@ TempoPotHandler _tempoPot(PIN_POT_TEMPO);
 
 bool active = true;
 
-// {patchID, pedalPosition 0..127}
-uint8_t currentState[2] = {DEFAULT_PATCH, DEFAULT_POSITION};
-unsigned int tempo = 100;
+// double currentState[2] = {DEFAULT_PATCH, DEFAULT_POSITION};
 
 void setup() {
   Serial.begin(31250);
@@ -45,7 +41,7 @@ void loop() {
   // LED::fade();
 
   if (active) {
-    runMode(currentState);
+    runMode();
 
     applyState();
   }
@@ -66,13 +62,17 @@ void updateInputHandlers() {
 }
 
 void applyState() {
-  setPatch(currentState[0]);
-  setPosition(currentState[1]);
-  LED::setLedBrightness(currentState[1]);
+  Pedal::apply();
+  // Pedal::setPatch(currentState[0]);
+  // Pedal::setPosition(currentState[1]);
+  LED::setLedBrightness(Pedal::getPosition());
 }
 
-void setActive(boolean _active) {
+void setActive(bool _active) {
   active = _active;
+  if (!_active) {
+    LED::ledOff();
+  }
 }
 
 void OnOffButtonHandler::onButtonDown(void) {
@@ -80,7 +80,6 @@ void OnOffButtonHandler::onButtonDown(void) {
 }
 
 void OnOffButtonHandler::onButtonPressed(void) {
-  
   setActive(!active);
 }
 

@@ -1,13 +1,21 @@
+#ifndef H_PEDAL
+#define H_PEDAL
+
 #include "./midi.h"
 #include "./patches.h"
+#define POSITION_NULL -1
 
-void setPatch(uint8_t patchID) {
-  Serial.write(COMMAND_PATCH_CHANGE);
-  Serial.write(PATCHES[patchID]);
+namespace Pedal {
+  void setPatch(int patchID);
+  void setPosition(int position);
+
+  /**
+   * Send the current patch and position to the actual pedal.
+   */
+  void apply();
+
+  int getPatch();
+  int getPosition();
 }
 
-void setPosition(uint8_t position) {
-  Serial.write(COMMAND_CC_CHANGE);
-  Serial.write(CC_PEDAL_POSITION);
-  Serial.write(position);
-}
+#endif

@@ -9,17 +9,17 @@ namespace {
   uint8_t _currentModeIndex = 0;
 }
 
-void runMode(uint8_t* state) {
+void runMode() {
   switch (_currentModeID) {
     // case MODE_RANDOM_POSITION:
     //   break;
 
     case MODE_SAW_UP:
-      Sawtooth::sawUp(state);
+      Sawtooth::sawUp();
       break;
 
     case MODE_SAW_DOWN:
-      Sawtooth::sawDown(state);
+      Sawtooth::sawDown();
       break;
 
     // case MODE_TRIANGLE:

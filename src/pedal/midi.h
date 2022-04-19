@@ -1,8 +1,10 @@
 #ifndef H_MIDI
 #define H_MIDI
 
-const uint8_t COMMAND_PATCH_CHANGE = B11000000;
-const uint8_t COMMAND_CC_CHANGE = B10110000;
-const uint8_t CC_PEDAL_POSITION = B00001011;
+#include <stdint.h>
+
+const uint8_t COMMAND_PATCH_CHANGE = 0b11000000;
+const uint8_t COMMAND_CC_CHANGE = 0b10110000;
+const uint8_t CC_PEDAL_POSITION = 0b00001011;
 
 #endif

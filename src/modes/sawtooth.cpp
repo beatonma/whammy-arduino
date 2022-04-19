@@ -1,8 +1,10 @@
 // #include "./util.cpp"
 #include <stdint.h>
+#include <math.h>
 #include "../frame/frame.h"
 #include "../tempo/tempo.h"
 #include "./sawtooth.h"
+#include "../pedal/pedal.h"
 
 namespace Sawtooth {
   namespace {
@@ -14,14 +16,17 @@ namespace Sawtooth {
     }
   }
 
-  void sawUp(uint8_t* state) {
+  void sawUp() {
     calcDelta();
-    state[1] = (int) (state[1] + delta) % 128;
+    // std::cout << delta;
+    // std::cout << "\n";
+    Pedal::setPosition(fmod(Pedal::getPosition() + delta, 128));
   }
 
-  void sawDown(uint8_t* state) {
+  void sawDown() {
     calcDelta();
-
-    state[1] = (int) (128.0 + state[1] - delta) % 128;
+    // std::cout << delta;
+    // std::cout << "\n";
+    Pedal::setPosition(fmod((128 + Pedal::getPosition() - delta), 128));
   }
 }
