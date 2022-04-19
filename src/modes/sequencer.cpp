@@ -11,7 +11,6 @@
 
 namespace Sequencer {
   namespace {
-    unsigned long lastStep = 0;
     uint8_t index = 0;
 
     uint8_t sequence = SEQ_NULL;
@@ -69,12 +68,13 @@ namespace Sequencer {
       Pedal::setPatch(patchBuffer[index]);
     }
 
+    void nextStep() {
+      index = (index + 1) % SEQ_BUFFER_SIZE;
+    }
+
+
     void step(bool position, bool patch) {
-      if (Frame::getTime() - lastStep >= Tempo::getPulseMillis() / 4.0) {
-        // 4 sequencer steps per quarter.
-        index = (index + 1) % SEQ_BUFFER_SIZE;
-        lastStep = Frame::getTime();
-      }
+      Tempo::onPulse(&nextStep, 0.25);  // 4 sequencer steps per quarter.
 
       if (position) {
         stepPosition();

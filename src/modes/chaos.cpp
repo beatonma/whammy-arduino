@@ -11,7 +11,6 @@ namespace Chaos {
       return rand() % (int) Pedal::getMaxPosition();
     }
 
-    unsigned long lastChange = 0;
     bool stutter = false;
     double stutterBuffer[] = {
       anyPosition(), anyPosition(), anyPosition(), anyPosition(),
@@ -35,10 +34,6 @@ namespace Chaos {
 
   void randomPosition() {
     Tempo::onPulse(&doRandomPosition, 0.1);
-    // if (Frame::getTime() - lastChange > (0.1 * Tempo::getPulseMillis())) {
-    // Pedal::setPosition(anyPosition());
-    //   lastChange = Frame::getTime();
-    // }
   }
 
   void randomPatchAndPosition() {

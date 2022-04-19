@@ -5,6 +5,6 @@ namespace Frame {
   void setTimestamp(unsigned long time);
 
   unsigned long getTime();
-  double getFrameTime();
+  double getFrameTime(); // Milliseconds consumed during the last loop.
 }
 #endif

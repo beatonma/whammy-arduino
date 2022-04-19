@@ -1,4 +1,4 @@
-#N canvas 2664 1623 527 619 12;
+#N canvas 3415 391 514 607 12;
 #X obj 638 23 ctlin;
 #X floatatom 638 120 5 0 0 0 - - -;
 #X floatatom 654 91 5 0 0 0 - - -;
@@ -40,7 +40,7 @@
 #X floatatom 689 386 5 0 0 0 - - -;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array patch-buffer 100 float 4;
-#X coords 0 -1 100 46 300 100 1 0 0;
+#X coords 0 -1 100 25 300 100 1 0 0;
 #X restore 45 440 graph;
 #X obj 657 548 tabwrite patch-buffer, f 23;
 #X obj 783 430 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144

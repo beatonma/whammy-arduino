@@ -8,6 +8,7 @@
 namespace Sawtooth {
   namespace {
     double delta;
+    double result;
 
     double calcDelta() {
       return (Frame::getFrameTime() / Tempo::getPulseMillis()) * Pedal::getMaxPosition();
@@ -26,11 +27,10 @@ namespace Sawtooth {
 
   void sawDown() {
     delta = calcDelta();
-    Pedal::setPosition(
-      fmod(
-        Pedal::getMaxPosition() + Pedal::getPosition() - delta,
-        Pedal::getMaxPosition() + 1.0
-      )
-    );
+    result = Pedal::getPosition() - delta;
+    if (result <= 0.0) {
+      result = Pedal::getMaxPosition() + result;
+    }
+    Pedal::setPosition(result);
   }
 }
