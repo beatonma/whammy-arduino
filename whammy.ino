@@ -1,11 +1,13 @@
 #include <Arduino.h>
 #include "./config.h"
-#include "./led/led.h"
-#include "./led/led.cpp"
-#include "./modes/modes.h"
-#include "./modes/modes.cpp"
-#include "./pedal/pedal.h"
-#include "./inputs.h"
+#include "./src/led/led.h"
+// #include "./src/led/led.cpp"
+#include "./src/modes/modes.h"
+// #include "./src/modes/modes.cpp"
+#include "./src/pedal/pedal.h"
+#include "./src/inputs.h"
+#include "./src/tempo/tempo.h"
+#include "./src/frame/frame.h"
 
 
 OnOffButtonHandler _onOffButton(PIN_BUTTON_ON_OFF);
@@ -13,10 +15,11 @@ ModeButtonHandler _modeButton(PIN_BUTTON_MODE);
 ModifierButtonHandler _modifierButton(PIN_BUTTON_MODIFIER);
 TempoPotHandler _tempoPot(PIN_POT_TEMPO);
 
+bool active = true;
 
-boolean active = true;
+// {patchID, pedalPosition 0..127}
 uint8_t currentState[2] = {DEFAULT_PATCH, DEFAULT_POSITION};
-int _delay = 100;
+unsigned int tempo = 100;
 
 void setup() {
   Serial.begin(31250);
@@ -32,12 +35,11 @@ void setup() {
 
   LED::setLed(active);
 
-  if (active) {
-    applyState();
-  }
+  applyState();
 }
 
 void loop() {
+  Frame::setTimestamp(millis());
   updateInputHandlers();
 
   // LED::fade();
@@ -46,7 +48,6 @@ void loop() {
     runMode(currentState);
 
     applyState();
-    delay(_delay);
   }
 }
 
@@ -67,59 +68,50 @@ void updateInputHandlers() {
 void applyState() {
   setPatch(currentState[0]);
   setPosition(currentState[1]);
+  LED::setLedBrightness(currentState[1]);
 }
 
 void setActive(boolean _active) {
   active = _active;
-  LED::setLed(active);
 }
 
 void OnOffButtonHandler::onButtonDown(void) {
-  // active = !active;
-  // setLed(active);
+  
 }
 
 void OnOffButtonHandler::onButtonPressed(void) {
+  
   setActive(!active);
-  // LED::setLed(active);
 }
 
 void OnOffButtonHandler::onButtonUp(void) {
-  // active = !active;
-  // setLed(active);
+  
 }
 
 void ModeButtonHandler::onButtonDown(void) {
   nextMode();
-  // active = !active;
-  // setLed(active);
 }
 
 void ModeButtonHandler::onButtonPressed(void) {
-  // nextMode();
-  // LED::setLed(active);
+  
 }
 
 void ModeButtonHandler::onButtonUp(void) {
-  // active = !active;
-  // setLed(active);
+  
 }
 
 void ModifierButtonHandler::onButtonDown(void) {
-  // active = !active;
-  // setLed(active);
+  
 }
 
 void ModifierButtonHandler::onButtonPressed(void) {
   setActive(!active);
-  // LED::setLed(active);
 }
 
 void ModifierButtonHandler::onButtonUp(void) {
-  // active = !active;
-  // setLed(active);
+  
 }
 
-void TempoPotHandler::onValueChanged(int value) {
-  _delay = (int) ((value / 1023.0) * 500);
+void TempoPotHandler::onProgressChanged(double progress) {
+  Tempo::setTempo(MIN_TEMPO + (int) (progress * (double) TEMPO_RANGE));
 }

@@ -78,12 +78,11 @@ class AbstractButtonHandler : AbstractInputHandler {
   /// Called in arduino setup() function
   void setup(void) {
     setPinMode(INPUT);
-    // writeDigital(HIGH);
   }
 
   /// Called in arduino loop() function
   void update(void) {
-    current_value_ = !readDigital();
+    current_value_ = readDigital();
     current_timestamp_ = getTimestamp();
 
     if (current_value_ != previous_value_) {
@@ -113,15 +112,18 @@ class AbstractButtonHandler : AbstractInputHandler {
    */
   void updateWithNewState(void) {
     onButtonToggle();
+
     if (current_value_ == true) {
       action_started_timestamp_ = getTimestamp();
       onButtonDown();
-    } else if (current_value_ == false) {
+    }
+    else if (current_value_ == false) {
       if (!action_consumed_) {
         // Trigger callbacks only if this action has not been consumed.
         if (action_ == ButtonAction::Press) {
           onButtonPressed();
         }
+
         onButtonUp();
       }
       // Reset action-tracking variables.

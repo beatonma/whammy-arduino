@@ -35,7 +35,7 @@ class TempoPotHandler: public AbstractPotentiometerHandler {
   public:
   TempoPotHandler(uint8_t pin): AbstractPotentiometerHandler(pin) {}
 
-  void onValueChanged(int value);
+  void onProgressChanged(double progress);
 };
 
 #endif

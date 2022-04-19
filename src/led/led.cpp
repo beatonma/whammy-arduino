@@ -1,16 +1,19 @@
-#include "../config.h"
+#include <Arduino.h>
+#include "../../config.h"
 #include "./led.h"
 
-using namespace LED;
+// using namespace LED;
 
-int _currentBrightness = 0;
+namespace {
+  int _currentBrightness = 0;
+}
 
 void LED::setLedBrightness(uint8_t brightness) {
   _currentBrightness = max(0, min(brightness, MAX_BRIGHTNESS));
   analogWrite(PIN_LED, _currentBrightness);
 }
 
-void LED::setLed(boolean on) {
+void LED::setLed(bool on) {
   if (on) {
     ledOn();
   }

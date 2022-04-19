@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+const uint8_t PATCH_NULL = 111;
+
 // RIGHT SIDE PATCHES
 const uint8_t PATCH_DETUNE_SHALLOW = 0;
 const uint8_t PATCH_DETUNE_DEEP = 1;

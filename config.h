@@ -1,20 +1,24 @@
 #ifndef H_CONFIG
 #define H_CONFIG
 
-#include <stdint.h>
-#include "./modes/modes.h"
-#include "./pedal/patches.h"
+#define MAX_TEMPO 200
+#define MIN_TEMPO 20
+#define TEMPO_RANGE (MAX_TEMPO - MIN_TEMPO)
 
-const uint8_t DEFAULT_PATCH = PATCH_WHAMMY_PLUS_ONE;
-const uint8_t DEFAULT_POSITION = 0;
+// #include <stdint.h>
+// #include "./src/modes/modes.h"
+#include "./src/pedal/patches.h"
 
-const uint8_t PIN_BUTTON_ON_OFF = 9;
-const uint8_t PIN_BUTTON_MODIFIER = 5;
-const uint8_t PIN_BUTTON_MODE = 7;
+#define DEFAULT_PATCH PATCH_WHAMMY_PLUS_ONE
+#define DEFAULT_POSITION 127
 
-const uint8_t PIN_POT_TEMPO = 6;
-const uint8_t PIN_LED = 11;
+#define PIN_BUTTON_ON_OFF 9
+#define PIN_BUTTON_MODIFIER 5
+#define PIN_BUTTON_MODE 7
 
-const uint8_t MAX_BRIGHTNESS = 90;
+#define PIN_POT_TEMPO 6
+#define PIN_LED 11
+
+#define MAX_BRIGHTNESS 90
 
 #endif
