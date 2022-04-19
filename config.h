@@ -1,13 +1,11 @@
 #ifndef H_CONFIG
 #define H_CONFIG
 
-#define MAX_TEMPO 200
-#define MIN_TEMPO 20
-#define TEMPO_RANGE (MAX_TEMPO - MIN_TEMPO)
-
-// #include <stdint.h>
-// #include "./src/modes/modes.h"
 #include "./src/pedal/patches.h"
+
+#define MAX_TEMPO 800.0
+#define MIN_TEMPO 1.0
+#define TEMPO_RANGE (MAX_TEMPO - MIN_TEMPO)
 
 #define DEFAULT_PATCH PATCH_WHAMMY_PLUS_ONE
 #define DEFAULT_POSITION 127

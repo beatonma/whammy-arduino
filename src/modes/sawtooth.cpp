@@ -11,22 +11,28 @@ namespace Sawtooth {
     double delta;
     double range = 127.0;
 
-    void calcDelta() {
-      delta = (Frame::getFrameTime() / Tempo::getPulseMillis()) * range;
+    double calcDelta() {
+      return (Frame::getFrameTime() / Tempo::getPulseMillis()) * range;
     }
   }
 
   void sawUp() {
-    calcDelta();
-    // std::cout << delta;
-    // std::cout << "\n";
-    Pedal::setPosition(fmod(Pedal::getPosition() + delta, 128));
+    delta = calcDelta();
+    Pedal::setPosition(
+      fmod(
+        Pedal::getPosition() + delta,
+        128.0
+      )
+    );
   }
 
   void sawDown() {
-    calcDelta();
-    // std::cout << delta;
-    // std::cout << "\n";
-    Pedal::setPosition(fmod((128 + Pedal::getPosition() - delta), 128));
+    delta = calcDelta();
+    Pedal::setPosition(
+      fmod(
+        128.0 + Pedal::getPosition() - delta,
+        128.0
+      )
+    );
   }
 }

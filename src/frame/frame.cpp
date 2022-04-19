@@ -3,7 +3,7 @@
 namespace {
   unsigned long timestamp;
   unsigned long previousTimestamp = 0;
-  unsigned long delta;
+  double delta;
 }
 
 void Frame::setTimestamp(unsigned long time) {
@@ -12,6 +12,6 @@ void Frame::setTimestamp(unsigned long time) {
   delta = timestamp - previousTimestamp;
 }
 
-unsigned long Frame::getFrameTime() {
+double Frame::getFrameTime() {
   return delta;
 }

@@ -7,7 +7,7 @@
 
 namespace Pedal {
   void setPatch(int patchID);
-  void setPosition(int position);
+  void setPosition(double position);
 
   /**
    * Send the current patch and position to the actual pedal.
@@ -15,7 +15,7 @@ namespace Pedal {
   void apply();
 
   int getPatch();
-  int getPosition();
+  double getPosition();
 }
 
 #endif

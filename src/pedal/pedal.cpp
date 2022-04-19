@@ -5,7 +5,7 @@
 
 namespace {
   int currentPatch = 0;
-  int currentPosition = 0;
+  double currentPosition = 0;
 
   void sendPatch() {
     Serial.write(COMMAND_PATCH_CHANGE);
@@ -15,21 +15,16 @@ namespace {
   void sendPosition() {
     Serial.write(COMMAND_CC_CHANGE);
     Serial.write(CC_PEDAL_POSITION);
-    Serial.write(currentPosition);
+    Serial.write((int) currentPosition);
   }
 }
 
 void Pedal::setPatch(int patchID) {
   currentPatch = patchID;
-  // Serial.write(COMMAND_PATCH_CHANGE);
-  // Serial.write(PATCHES[patchID]);
 }
 
-void Pedal::setPosition(int position) {
+void Pedal::setPosition(double position) {
   currentPosition = position;
-  Serial.write(COMMAND_CC_CHANGE);
-  Serial.write(CC_PEDAL_POSITION);
-  Serial.write(position);
 }
 
 void Pedal::apply() {
@@ -45,6 +40,6 @@ int Pedal::getPatch() {
   return currentPatch;
 }
 
-int Pedal::getPosition() {
+double Pedal::getPosition() {
   return currentPosition;
 }

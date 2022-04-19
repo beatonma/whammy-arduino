@@ -2,7 +2,8 @@
 #define H_TEMPO
 
 namespace Tempo {
-  void setTempo(unsigned int bpm);
+  void setTempo(double bpm);
+  double getTempoBpm();
   double getPulseMillis();
 }
 

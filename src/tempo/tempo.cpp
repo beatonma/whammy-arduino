@@ -2,19 +2,23 @@
 
 
 namespace {
-  unsigned int tempoBpm; // bpm
+  double tempoBpm; // bpm
   double pulseMillis; // Number of milliseconds between beats
 
-  double tempoToPulseMillis(unsigned int tempo) {
-    return (60.0 / (double) tempo) * 100.0;
+  double tempoToPulseMillis(double bpm) {
+    return 60000.0 / bpm;
   }
 }
 
-void Tempo::setTempo(unsigned int bpm) {
+void Tempo::setTempo(double bpm) {
   tempoBpm = bpm;
   pulseMillis = tempoToPulseMillis(bpm);
 }
 
 double Tempo::getPulseMillis() {
   return pulseMillis;
+}
+
+double Tempo::getTempoBpm() {
+  return tempoBpm;
 }
