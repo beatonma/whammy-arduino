@@ -21,11 +21,11 @@ namespace Sequencer {
       0, 0, 0, 0,
       0, 0, 0, 0,
     };
-    double patchBuffer[SEQ_BUFFER_SIZE] = {
-      DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH,
-      DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH,
-      DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH,
-      DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH, DEFAULT_PATCH,
+    uint8_t patchBuffer[SEQ_BUFFER_SIZE] = {
+      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
+      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
+      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
+      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
     };
 
     void initSquare() {
@@ -40,7 +40,25 @@ namespace Sequencer {
     }
 
     void initMotp() {
-      // TODO
+      Tempo::setTempo(121.0);
+      Pedal::setPosition(127.0);
+
+      patchBuffer[0] = PATCH_WHAMMY_MINUS_ONE;
+      patchBuffer[1] = PATCH_OFF;
+      patchBuffer[2] = PATCH_WHAMMY_PLUS_ONE;
+      patchBuffer[3] = PATCH_OFF;
+      patchBuffer[4] = PATCH_WHAMMY_PLUS_ONE;
+      patchBuffer[5] = PATCH_OFF;
+      patchBuffer[6] = PATCH_WHAMMY_MINUS_ONE;
+      patchBuffer[7] = PATCH_OFF;
+      patchBuffer[8] = PATCH_WHAMMY_PLUS_ONE;
+      patchBuffer[9] = PATCH_OFF;
+      patchBuffer[10] = PATCH_WHAMMY_PLUS_ONE;
+      patchBuffer[11] = PATCH_OFF;
+      patchBuffer[12] = PATCH_WHAMMY_MINUS_ONE;
+      patchBuffer[13] = PATCH_OFF;
+      patchBuffer[14] = PATCH_WHAMMY_PLUS_ONE;
+      patchBuffer[15] = PATCH_OFF;
     }
 
     void stepPosition() {
@@ -82,60 +100,6 @@ namespace Sequencer {
       initMotp();
     }
 
-    step(true, true);
+    step(false, true);
   }
 }
-
-// const uint8_t SEQUENCE_LENGTH = 16;
-// uint8_t patchSequence[SEQUENCE_LENGTH] = {
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-//   DEFAULT_PATCH,
-// };
-
-// uint8_t positionSequence[SEQUENCE_LENGTH] = {
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-//   0,
-//   127,
-// };
-// uint8_t sequenceIndex = 0;
-
-// // void sequencePosition(byte positions[]) {
-// //   setPosition(positions[sequenceIndex]);
-// //   sequenceIndex = (sequenceIndex + 1) % SEQUENCE_LENGTH;
-// // }
-
-// // void mapOfTheProblematique() {
-// //   // TODO
-// // }
-
-// // void square() {
-// //   sequencePosition(positionSequence);
-// //   scheduleNext(500);
-// // }

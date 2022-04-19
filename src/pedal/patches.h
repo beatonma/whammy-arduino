@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 const uint8_t PATCH_NULL = 111;
+const uint8_t PATCH_OFF = 21;  // +1 octave bypass
 
 // RIGHT SIDE PATCHES
 const uint8_t PATCH_DETUNE_SHALLOW = 0;
@@ -26,6 +27,7 @@ const uint8_t PATCH_UP_HARMONY_THIRD_FOURTH = 10;
 const uint8_t PATCH_UP_HARMONY_THIRD_THIRD = 9;
 const uint8_t PATCH_UP_HARMONY_SECOND_THIRD = 8;
 
+
 const uint8_t PATCHES[] = {
   PATCH_DETUNE_SHALLOW,
   PATCH_DETUNE_DEEP,
@@ -46,5 +48,9 @@ const uint8_t PATCHES[] = {
   PATCH_UP_HARMONY_SECOND_THIRD,
 };
 const uint8_t NUM_PATCHES = sizeof(PATCHES);
+
+namespace Patch {
+  uint8_t anyPatch();
+}
 
 #endif

@@ -8,7 +8,7 @@
 namespace Pedal {
   void setPatch(int patchID);
   void setPosition(double position);
-  void setMaxPosition();
+  void setMaxPosition(double max);
   
   int getPatch();
   double getPosition();

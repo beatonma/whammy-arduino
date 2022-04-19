@@ -68,11 +68,16 @@ void OnOffButtonHandler::onButtonPressed(void) {
 }
 
 void TempoPotHandler::onProgressChanged(double progress) {
-  Tempo::setTempo(MIN_TEMPO + (progress * TEMPO_RANGE));
+  if (_modifierButton.isDown()) {
+    Pedal::setMaxPosition(progress * 127.0);
+  }
+  else {
+    Tempo::setTempo(MIN_TEMPO + (progress * TEMPO_RANGE));
+  }
 }
 
 void ModifierButtonHandler::onButtonPressed(void) {
-  setActive(!active);
+
 }
 
 void OnOffButtonHandler::onButtonDown(void) {
@@ -84,7 +89,12 @@ void OnOffButtonHandler::onButtonUp(void) {
 }
 
 void ModeButtonHandler::onButtonDown(void) {
-  nextMode();
+  if (_modifierButton.isDown()) {
+    previousMode();
+  }
+  else {
+    nextMode();
+  }
 }
 
 void ModeButtonHandler::onButtonPressed(void) {
