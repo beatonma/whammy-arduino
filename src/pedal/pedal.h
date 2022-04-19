@@ -8,14 +8,16 @@
 namespace Pedal {
   void setPatch(int patchID);
   void setPosition(double position);
+  void setMaxPosition();
+  
+  int getPatch();
+  double getPosition();
+  double getMaxPosition();
 
   /**
    * Send the current patch and position to the actual pedal.
    */
   void apply();
-
-  int getPatch();
-  double getPosition();
 }
 
 #endif

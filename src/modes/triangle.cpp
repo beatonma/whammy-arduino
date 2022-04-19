@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include "./util.cpp"
 #include <math.h>
 #include "../frame/frame.h"
 #include "../tempo/tempo.h"
@@ -15,13 +14,13 @@ namespace Triangle {
   }
 
   void triangle() {
-    delta = (Frame::getFrameTime() / Tempo::getPulseMillis()) * 255.0;
+    delta = (Frame::getFrameTime() / Tempo::getPulseMillis()) * (Pedal::getMaxPosition() * 2.0);
 
     if (direction) {
       result = Pedal::getPosition() + delta;
-      if (result > 127.0) {
+      if (result > Pedal::getMaxPosition()) {
         // bounce back from limit.
-        result = 127.0 - (result - 127.0);
+        result = Pedal::getMaxPosition() - (result - Pedal::getMaxPosition());
         direction = !direction;
       }
     }

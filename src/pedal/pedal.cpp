@@ -3,43 +3,54 @@
 #include "./patches.h"
 #include "./midi.h"
 
-namespace {
-  int currentPatch = 0;
-  double currentPosition = 0;
+namespace Pedal {
+  namespace {
+    int currentPatch = 3;
+    double currentPosition = 0;
+    double maxPosition = 127.0;
 
-  void sendPatch() {
-    Serial.write(COMMAND_PATCH_CHANGE);
-    Serial.write(PATCHES[currentPatch]);
+    void sendPatch() {
+      Serial.write(COMMAND_PATCH_CHANGE);
+      Serial.write(PATCHES[currentPatch]);
+    }
+
+    void sendPosition() {
+      Serial.write(COMMAND_CC_CHANGE);
+      Serial.write(CC_PEDAL_POSITION);
+      Serial.write((int) currentPosition);
+    }
   }
 
-  void sendPosition() {
-    Serial.write(COMMAND_CC_CHANGE);
-    Serial.write(CC_PEDAL_POSITION);
-    Serial.write((int) currentPosition);
+  void setPatch(int patchID) {
+    currentPatch = patchID;
   }
-}
 
-void Pedal::setPatch(int patchID) {
-  currentPatch = patchID;
-}
-
-void Pedal::setPosition(double position) {
-  currentPosition = position;
-}
-
-void Pedal::apply() {
-  if (currentPatch != PATCH_NULL) {
-    sendPatch();
+  void setPosition(double position) {
+    currentPosition = position;
   }
-  if (currentPosition != POSITION_NULL) {
-    sendPosition();
+
+  void setMaxPosition(double max) {
+    maxPosition = max;
   }
-}
 
-int Pedal::getPatch() {
-  return currentPatch;
-}
+  void apply() {
+    if (currentPatch != PATCH_NULL) {
+      sendPatch();
+    }
+    if (currentPosition != POSITION_NULL) {
+      sendPosition();
+    }
+  }
 
-double Pedal::getPosition() {
-  return currentPosition;
+  int getPatch() {
+    return currentPatch;
+  }
+
+  double getPosition() {
+    return currentPosition;
+  }
+
+  double getMaxPosition() {
+    return maxPosition;
+  }
 }

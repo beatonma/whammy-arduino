@@ -1,17 +1,23 @@
 #include "./frame.h"
 
-namespace {
-  unsigned long timestamp;
-  unsigned long previousTimestamp = 0;
-  double delta;
-}
+namespace Frame {
+  namespace {
+    unsigned long timestamp;
+    unsigned long previousTimestamp = 0;
+    double delta;
+  }
 
-void Frame::setTimestamp(unsigned long time) {
-  previousTimestamp = timestamp;
-  timestamp = time;
-  delta = timestamp - previousTimestamp;
-}
+  void setTimestamp(unsigned long time) {
+    previousTimestamp = timestamp;
+    timestamp = time;
+    delta = timestamp - previousTimestamp;
+  }
 
-double Frame::getFrameTime() {
-  return delta;
+  unsigned long getTime() {
+    return timestamp;
+  }
+
+  double getFrameTime() {
+    return delta;
+  }
 }

@@ -2,19 +2,18 @@
 #include "../../config.h"
 #include "../frame/frame.h"
 #include "../modes/modes.h"
+#include "./chaos.h"
 #include "./sawtooth.h"
 #include "./triangle.h"
+#include "./sequencer.h"
 
 namespace {
-  uint8_t currentModeID = MODE_SAW_UP;
   uint8_t currentModeIndex = 0;
+  uint8_t currentModeID = MODES[currentModeIndex];
 }
 
 void runMode() {
   switch (currentModeID) {
-    // case MODERANDOMPOSITION:
-    //   break;
-
     case MODE_SAW_UP:
       Sawtooth::sawUp();
       break;
@@ -27,12 +26,13 @@ void runMode() {
       Triangle::triangle();
       break;
 
-    // case MODESQUARE:
-    //   square();
-    //   break;
-    // case MODECHAOS:
-    //   chaos();
-    //   break;
+    case MODE_SQUARE:
+      Sequencer::square();
+      break;
+
+    case MODE_CHAOS:
+      Chaos::randomPosition();
+      break;
   }
 }
 

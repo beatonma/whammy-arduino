@@ -1,18 +1,16 @@
-// #include "./util.cpp"
-#include <stdint.h>
 #include <math.h>
+#include <stdint.h>
+#include "./sawtooth.h"
 #include "../frame/frame.h"
 #include "../tempo/tempo.h"
-#include "./sawtooth.h"
 #include "../pedal/pedal.h"
 
 namespace Sawtooth {
   namespace {
     double delta;
-    double range = 127.0;
 
     double calcDelta() {
-      return (Frame::getFrameTime() / Tempo::getPulseMillis()) * range;
+      return (Frame::getFrameTime() / Tempo::getPulseMillis()) * Pedal::getMaxPosition();
     }
   }
 
@@ -21,7 +19,7 @@ namespace Sawtooth {
     Pedal::setPosition(
       fmod(
         Pedal::getPosition() + delta,
-        128.0
+        Pedal::getMaxPosition() + 1.0
       )
     );
   }
@@ -30,8 +28,8 @@ namespace Sawtooth {
     delta = calcDelta();
     Pedal::setPosition(
       fmod(
-        128.0 + Pedal::getPosition() - delta,
-        128.0
+        Pedal::getMaxPosition() + Pedal::getPosition() - delta,
+        Pedal::getMaxPosition() + 1.0
       )
     );
   }
