@@ -30,6 +30,21 @@ The implementation currently provides these modes:
 - LED
 - A few resistors, wire, case, etc.
 
+### Controls
+
+**On/off**: activate the pedal.  
+**Modifier + On/off**: Toggle between momentary and latching activation. Default: momentary.
+
+**Mode**: move to the next pedal mode.  
+**Modifier + Mode**: move to previous mode.
+
+**Tempo potentiometer**: Turn to change speed of all pedal functions.  
+**Modifier + Tempo potentiometer**: Limit the maximum range of the pedal position for _tasteful vibrato-like operation_ <sup>\[citation needed\]</sup>.
+
+**Modifier**: Tap to change the musical mode used in 'quantized scale' mode.
+
+In all modes, the LED brightness indicates the effective position of the pedal - brighter means toe-down, darker means heel-down.
+
 ### monitor.pd
 
 If you want to work on this project without going mad from constant
