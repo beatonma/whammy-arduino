@@ -7,15 +7,21 @@ namespace Tempo {
     unsigned long lastStep = 0;
     double tempoBpm; // bpm
     double pulseMillis; // Number of milliseconds between beats
+    double frequency; // Hertz
   }
 
   void setTempo(double bpm) {
     tempoBpm = bpm;
     pulseMillis = 60000.0 / bpm;
+    frequency = 1000.0 / pulseMillis;
   }
 
   double getPulseMillis() {
     return pulseMillis;
+  }
+
+  double getFrequency() {
+    return frequency;
   }
 
   double getTempoBpm() {

@@ -2,38 +2,38 @@
 #include "../../config.h"
 #include "./led.h"
 
-// using namespace LED;
-
-namespace {
-  int _currentBrightness = 0;
-}
-
-void LED::setLedBrightness(uint8_t brightness) {
-  _currentBrightness = max(0, min(brightness, MAX_BRIGHTNESS));
-  analogWrite(PIN_LED, _currentBrightness);
-}
-
-void LED::setLed(bool on) {
-  if (on) {
-    ledOn();
+namespace LED {
+  namespace {
+    int currentBrightness = 0;
   }
-  else {
-    ledOff();
+
+  void setBrightness(uint8_t brightness) {
+    currentBrightness = max(0, min(brightness, MAX_BRIGHTNESS));
+    analogWrite(PIN_LED, currentBrightness);
   }
-}
 
-void LED::ledOff() {
-  setLedBrightness(0);
-}
+  void set(bool _on) {
+    if (_on) {
+      on();
+    }
+    else {
+      off();
+    }
+  }
 
-void LED::ledOn() {
-  setLedBrightness(MAX_BRIGHTNESS);
-}
+  void off() {
+    setBrightness(0);
+  }
 
-void LED::fade() {
-  fadeBy(10);
-}
+  void on() {
+    setBrightness(MAX_BRIGHTNESS);
+  }
 
-void LED::fadeBy(int amount) {
-  setLedBrightness(_currentBrightness - amount);
+  void fade() {
+    fadeBy(10);
+  }
+
+  void fadeBy(int amount) {
+    setBrightness(currentBrightness - amount);
+  }
 }

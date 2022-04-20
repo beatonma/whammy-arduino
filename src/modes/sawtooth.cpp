@@ -11,7 +11,7 @@ namespace Sawtooth {
     double result;
 
     double calcDelta() {
-      return (Frame::getFrameTime() / Tempo::getPulseMillis()) * Pedal::getMaxPosition();
+      return (Frame::getFrameDelta() / Tempo::getPulseMillis()) * Pedal::getMaxPosition();
     }
   }
 

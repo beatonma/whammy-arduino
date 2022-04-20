@@ -5,6 +5,7 @@ namespace Frame {
   void setTimestamp(unsigned long time);
 
   unsigned long getTime();
-  double getFrameTime(); // Milliseconds consumed during the last loop.
+  double getFrameDelta(); // Milliseconds consumed during the last loop.
+  double getAbsoluteDelta(); // Milliseconds since device initiation.
 }
 #endif

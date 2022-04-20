@@ -2,10 +2,10 @@
 #define H_LED
 
 namespace LED {
-  void setLedBrightness(uint8_t brightness);
-  void setLed(bool on);
-  void ledOn();
-  void ledOff();
+  void setBrightness(uint8_t brightness);
+  void set(bool on);
+  void on();
+  void off();
   void fade();
   void fadeBy(int amount);
 }

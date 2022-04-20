@@ -1,7 +1,12 @@
 #include "./frame.h"
+#include <Arduino.h>
 
 namespace Frame {
   namespace {
+    // A timestamp representing t=0, set once.
+    unsigned long zeroTimestamp = millis();
+
+    // Updated each loop().
     unsigned long timestamp;
     unsigned long previousTimestamp = 0;
     double delta;
@@ -17,7 +22,11 @@ namespace Frame {
     return timestamp;
   }
 
-  double getFrameTime() {
+  double getAbsoluteDelta() {
+    return timestamp - zeroTimestamp;
+  }
+
+  double getFrameDelta() {
     return delta;
   }
 }

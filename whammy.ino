@@ -20,7 +20,7 @@ void setup() {
   Serial.begin(31250);
 
   pinMode(PIN_LED, OUTPUT);
-  LED::ledOn();
+  LED::on();
   setupInputHandlers();
 
   applyState();
@@ -31,21 +31,21 @@ void loop() {
   updateInputHandlers();
 
   if (active) {
-    runMode();
+    Mode::run();
     applyState();
   }
 }
 
 void applyState() {
   Pedal::apply();
-  LED::setLedBrightness(Pedal::getPosition());
+  LED::setBrightness(Pedal::getPosition());
 }
 
 void setActive(bool _active) {
   active = _active;
 
   if (!_active) {
-    LED::ledOff();
+    LED::off();
   }
 }
 
@@ -90,10 +90,10 @@ void OnOffButtonHandler::onButtonUp(void) {
 
 void ModeButtonHandler::onButtonDown(void) {
   if (_modifierButton.isDown()) {
-    previousMode();
+    Mode::previous();
   }
   else {
-    nextMode();
+    Mode::next();
   }
 }
 

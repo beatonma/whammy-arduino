@@ -5,16 +5,16 @@
 #include "../pedal/pedal.h"
 
 
-namespace Triangle {
-
+namespace Continuous {
   namespace {
     double delta;
     double result;
+    double offset;
     bool direction = true;
   }
 
   void triangle() {
-    delta = (Frame::getFrameTime() / Tempo::getPulseMillis()) * (Pedal::getMaxPosition() * 2.0);
+    delta = (Frame::getFrameDelta() / Tempo::getPulseMillis()) * (Pedal::getMaxPosition() * 2.0);
 
     if (direction) {
       result = Pedal::getPosition() + delta;
@@ -33,5 +33,18 @@ namespace Triangle {
       }
     }
     Pedal::setPosition(result);
+  }
+
+  void sine() {
+    delta = Frame::getAbsoluteDelta();
+    offset = Pedal::getMaxPosition() / 2.0;
+
+    Pedal::setPosition(
+      offset + (
+        sin(
+          Tempo::getFrequency() * delta / Tempo::getPulseMillis()
+        ) * offset
+      )
+    );
   }
 }
