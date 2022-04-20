@@ -1,4 +1,5 @@
 # whammy-arduino
+
 A MIDI controller for the Digitech Whammy IV effects pedal.
 
 <span>
@@ -7,15 +8,21 @@ A MIDI controller for the Digitech Whammy IV effects pedal.
 </span>
 
 The implementation currently provides these modes:
-- Saw up:   / / / / / / /
-- Saw down: \ \ \ \ \ \ \
-- Triangle  / \ / \ / \ /
-- Square:   _ - _ - _ - _
-- "Map of the Problematique" sequencer.
-- Various randomisers.
 
+- Saw up: / / / / / / /
+- Saw down: \ \ \ \ \ \ \
+- Triangle: / \ / \ / \ /
+- Sine: like triangle but curvier.
+- Square: _ - _ - _ - _
+- "Map of the Problematique" sequencer.
+- Randomisers:
+  - Quantized to a musical mode e.g. Phrygian, Lydian...
+  - Unquantized, any pedal position. Bleep bloop.
+  - Unquantized, any pedal position, any patch.
+  - Chaos randomiser, applying any of the other modes randomly.
 
 ### Hardware
+
 - Arduino Nano clone
 - 3 momentary buttons
 - One linear potentiometer
@@ -23,8 +30,8 @@ The implementation currently provides these modes:
 - LED
 - A few resistors, wire, case, etc.
 
-
 ### monitor.pd
+
 If you want to work on this project without going mad from constant
 atonal wee-woo noises, open `monitor.pd` with
 [Pure Data](https://puredata.info/) to see a visualisation of the
@@ -32,6 +39,6 @@ MIDI messages instead.
 
 <img src="https://user-images.githubusercontent.com/12682046/164093582-a64960d4-7681-49a6-aa1f-fbc980e40858.png" width="300" alt="Visualisation with Pure Data" />
 
-----
+---
 
 This project kept me busy while isolating with Covid 19 in April 2022. The illness provided some gnarly headaches and this project did not help with that whatsoever. Fun though.
