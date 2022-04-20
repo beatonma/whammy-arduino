@@ -6,6 +6,7 @@
 #include "./src/tempo/tempo.h"
 #include "./src/frame/frame.h"
 #include "./src/inputs.h"
+#include "./src/modes/scales.h"
 
 
 OnOffButtonHandler _onOffButton(PIN_BUTTON_ON_OFF);
@@ -14,13 +15,14 @@ ModifierButtonHandler _modifierButton(PIN_BUTTON_MODIFIER);
 TempoPotHandler _tempoPot(PIN_POT_TEMPO);
 
 
-bool active = false;
 
 /**
  * If true, the pedal is only active while the button is held.
  * If false, on/off button works as a toggle.
  */
-bool momentary = true;
+bool momentary = false;
+
+bool active = !momentary;
 
 void setup() {
   Serial.begin(31250);
@@ -28,6 +30,8 @@ void setup() {
   pinMode(PIN_LED, OUTPUT);
   LED::on();
   setupInputHandlers();
+  delay(100);
+  LED::off();
 
   applyState();
 }
@@ -89,18 +93,18 @@ void TempoPotHandler::onProgressChanged(double progress) {
 }
 
 void ModifierButtonHandler::onButtonPressed(void) {
-
+  Scale::nextScale();
 }
 
 void OnOffButtonHandler::onButtonDown(void) {
   if (momentary) {
-    active = true;
+    setActive(true);
   }
 }
 
 void OnOffButtonHandler::onButtonUp(void) {
   if (momentary) {
-    active = false;
+    setActive(false);
   }
 }
 

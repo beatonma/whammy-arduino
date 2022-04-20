@@ -9,6 +9,7 @@
 #include "./sawtooth.h"
 #include "./continuous.h"
 #include "./sequencer.h"
+#include "./scales.h"
 
 namespace Mode {
   namespace {
@@ -24,6 +25,10 @@ namespace Mode {
       switch (modeID) {
         case MODE_RANDOM_POSITION:
           Chaos::randomPosition();
+          break;
+
+        case MODE_SCALE:
+          Scale::scale();
           break;
 
         case MODE_RANDOM_POSITION_STUTTER:

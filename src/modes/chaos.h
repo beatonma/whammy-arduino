@@ -5,4 +5,5 @@ namespace Chaos {
   void randomPosition();
   void randomPatchAndPosition();
   void randomPositionWithStutter();
+  void randomQuantized();
 }

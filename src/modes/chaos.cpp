@@ -79,4 +79,8 @@ namespace Chaos {
   void randomPatchAndPosition() {
     Tempo::onPulse(&doRandomPatchAndPosition, 0.5);
   }
+
+  void randomQuantized() {
+    
+  }
 }

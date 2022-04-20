@@ -3,11 +3,12 @@
 
 #include "./midi.h"
 #include "./patches.h"
+
 #define POSITION_NULL -1
 
 #define POSITION_SEMITONE 127.0 / 12.0
 #define semitones(N) (POSITION_SEMITONE * (double) N)
-#define POSITION_UNISON 0.0
+#define POSITION_ROOT 0.0
 #define POSITION_MINOR_SECOND semitones(1)
 #define POSITION_MAJOR_SECOND semitones(2)
 #define POSITION_MINOR_THIRD semitones(3)
@@ -22,7 +23,7 @@
 #define POSITION_OCTAVE semitones(12)
 
 const double QUANTIZED_POSITIONS[] = {
-  POSITION_UNISON,
+  POSITION_ROOT,
   POSITION_MINOR_SECOND,
   POSITION_MAJOR_SECOND,
   POSITION_MINOR_THIRD,

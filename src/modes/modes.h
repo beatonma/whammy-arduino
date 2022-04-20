@@ -11,8 +11,10 @@
 #define MODE_RANDOM_PATCH_AND_POSITION 7
 #define MODE_MOTP 8
 #define MODE_TRUE_CHAOS 9
+#define MODE_SCALE 10
 
 const uint8_t MODES[] = {
+  MODE_SCALE,       // Move pedal to simulate a mode e.g. phyrigian.
   MODE_RANDOM_POSITION, // Move pedal to any position
   MODE_RANDOM_POSITION_STUTTER,
   MODE_SAW_UP,      // Move toe down
