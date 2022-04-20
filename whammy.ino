@@ -14,7 +14,13 @@ ModifierButtonHandler _modifierButton(PIN_BUTTON_MODIFIER);
 TempoPotHandler _tempoPot(PIN_POT_TEMPO);
 
 
-bool active = true;
+bool active = false;
+
+/**
+ * If true, the pedal is only active while the button is held.
+ * If false, on/off button works as a toggle.
+ */
+bool momentary = true;
 
 void setup() {
   Serial.begin(31250);
@@ -64,7 +70,13 @@ void updateInputHandlers() {
 }
 
 void OnOffButtonHandler::onButtonPressed(void) {
-  setActive(!active);
+  if (_modifierButton.isDown()) {
+    momentary = !momentary;
+    setActive(false);
+  }
+  else {
+    setActive(!active);
+  }
 }
 
 void TempoPotHandler::onProgressChanged(double progress) {
@@ -81,11 +93,15 @@ void ModifierButtonHandler::onButtonPressed(void) {
 }
 
 void OnOffButtonHandler::onButtonDown(void) {
-  
+  if (momentary) {
+    active = true;
+  }
 }
 
 void OnOffButtonHandler::onButtonUp(void) {
-  
+  if (momentary) {
+    active = false;
+  }
 }
 
 void ModeButtonHandler::onButtonDown(void) {

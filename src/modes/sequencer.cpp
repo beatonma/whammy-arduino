@@ -21,11 +21,17 @@ namespace Sequencer {
       0, 0, 0, 0,
     };
     uint8_t patchBuffer[SEQ_BUFFER_SIZE] = {
-      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
-      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
-      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
-      Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(), Patch::anyPatch(),
+      0, 0, 0, 0,
+      0, 0, 0, 0,
+      0, 0, 0, 0,
+      0, 0, 0, 0,
     };
+
+    void initRandom() {
+      for (int i = 0; i < SEQ_BUFFER_SIZE; i++) {
+        positionBuffer[i] = Pedal::anyPosition();
+      }
+    }
 
     void initSquare() {
       for (int i = 0; i < SEQ_BUFFER_SIZE; i++) {

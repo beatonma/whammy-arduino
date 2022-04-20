@@ -53,4 +53,16 @@ namespace Pedal {
   double getMaxPosition() {
     return maxPosition;
   }
+
+  uint8_t anyPatch() {
+    return PATCHES[rand() % NUM_PATCHES];
+  }
+
+  double anyPosition() {
+    return rand() % (int) getMaxPosition();
+  }
+
+  double anyQuantizedPosition() {
+    return QUANTIZED_POSITIONS[rand() % NUM_QUANTIZED_POSITIONS];
+  }
 }

@@ -26,6 +26,10 @@ namespace Mode {
           Chaos::randomPosition();
           break;
 
+        case MODE_RANDOM_POSITION_STUTTER:
+          Chaos::randomPositionWithStutter();
+          break;
+
         case MODE_SAW_UP:
           Sawtooth::sawUp();
           break;

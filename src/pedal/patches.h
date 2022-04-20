@@ -49,8 +49,4 @@ const uint8_t PATCHES[] = {
 };
 #define NUM_PATCHES sizeof(PATCHES)
 
-namespace Patch {
-  uint8_t anyPatch();
-}
-
 #endif
