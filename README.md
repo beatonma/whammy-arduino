@@ -2,6 +2,8 @@
 
 A MIDI controller for the Digitech Whammy IV effects pedal.
 
+[Demo on Youtube](https://www.youtube.com/watch?v=WNatA7jqHCU "Nauseating audio demo")
+
 <span>
   <img src="https://user-images.githubusercontent.com/12682046/164094312-056a5869-a076-41b6-8458-f2a05f56958b.jpg" width="300" alt="Pedal externals" />
   <img src="https://user-images.githubusercontent.com/12682046/164094408-1f04eb69-766c-47b1-8ecb-b9c5890650ef.jpg" width="300" alt="Pedal guts" />
