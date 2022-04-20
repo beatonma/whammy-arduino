@@ -32,7 +32,7 @@ namespace Scale {
 
   void scale() {
     Tempo::onPulse(anyNote, 0.25);
-    Pedal::setPosition((*SCALES)[scaleIndex][noteIndex]);//[noteIndex]);
+    Pedal::setPosition((*SCALES)[scaleIndex][noteIndex]);
   }
 
   void nextScale() {
