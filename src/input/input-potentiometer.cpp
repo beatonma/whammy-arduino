@@ -4,7 +4,7 @@
 
 class AbstractPotentiometerHandler: AbstractInputHandler
 {
-  static const int ANALOG_READ_TOLERANCE = 5;  // Ignore changes in value smaller than this
+  static const int ANALOG_READ_TOLERANCE = 10;  // Ignore changes in value smaller than this
 
 public:
   // Minimum change between previous_value_ and current_value_ that is considered

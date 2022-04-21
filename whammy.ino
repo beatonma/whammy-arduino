@@ -7,6 +7,7 @@
 #include "./src/frame/frame.h"
 #include "./src/inputs.h"
 #include "./src/modes/scales.h"
+#include "./src/modes/sequencer.h"
 
 
 OnOffButtonHandler _onOffButton(PIN_BUTTON_ON_OFF);
@@ -20,7 +21,7 @@ TempoPotHandler _tempoPot(PIN_POT_TEMPO);
  * If true, the pedal is only active while the button is held.
  * If false, on/off button works as a toggle.
  */
-bool momentary = true;
+bool momentary = false;
 
 bool active = !momentary;
 
@@ -94,6 +95,7 @@ void TempoPotHandler::onProgressChanged(double progress) {
 
 void ModifierButtonHandler::onButtonPressed(void) {
   Scale::nextScale();
+  Sequencer::next();
 }
 
 void OnOffButtonHandler::onButtonDown(void) {

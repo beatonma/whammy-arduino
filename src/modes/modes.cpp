@@ -51,17 +51,21 @@ namespace Mode {
           Continuous::sine();
           break;
 
-        case MODE_SQUARE:
-          Sequencer::square();
+        case MODE_SEQUENCER:
+          Sequencer::step();
           break;
+
+        // case MODE_SQUARE:
+        //   Sequencer::square();
+        //   break;
         
         case MODE_RANDOM_PATCH_AND_POSITION:
           Chaos::randomPatchAndPosition();
           break;
 
-        case MODE_MOTP:
-          Sequencer::motp();
-          break;
+        // case MODE_MOTP:
+        //   Sequencer::motp();
+        //   break;
         
         case MODE_TRUE_CHAOS:
           Tempo::onPulse(&runAny, 1.0);

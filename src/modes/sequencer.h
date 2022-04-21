@@ -4,6 +4,9 @@
 namespace Sequencer {
   void square();
   void motp();
+
+  void step();
+  void next();
 }
 
 #endif

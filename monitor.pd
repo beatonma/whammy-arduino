@@ -1,4 +1,4 @@
-#N canvas 3415 391 514 607 12;
+#N canvas 2730 1248 960 825 12;
 #X obj 638 23 ctlin;
 #X floatatom 638 120 5 0 0 0 - - -;
 #X floatatom 654 91 5 0 0 0 - - -;
@@ -19,7 +19,7 @@
 #X obj 531 235 dac~;
 #X obj 574 139 * 10;
 #X obj 347 108 vsl 15 95 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3600 1;
+-1 -1 0 1;
 #X obj 555 206 *~;
 #X text 369 190 Volume;
 #N canvas 0 50 450 250 (subpatch) 0;
@@ -50,6 +50,19 @@
 #X floatatom 815 484 5 0 0 0 - - -;
 #X obj 850 515 moses 100;
 #X msg 815 515 0;
+#X obj 396 657 dac~;
+#X obj 347 442 vsl 15 95 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1100 1;
+#X obj 438 597 osc~;
+#X obj 421 626 *~;
+#X obj 440 417 - 1;
+#X obj 438 480 expr if ($f1 == 3 \, 440 \, $f1);
+#X obj 438 508 expr if ($f1 == 4 \, 110 \, $f1);
+#X obj 438 536 expr if ($f1 == 5 \, 55 \, $f1);
+#X obj 438 454 expr if ($f1 == 2 \, 880 \, $f1);
+#X obj 438 566 expr if ($f1 == 1 \, 220 \, $f1);
+#X text 479 597 Synthesise when patch is octave +1/+2/-1/-2/deep detune
+;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 0 2 3 0;
@@ -77,6 +90,7 @@
 #X connect 27 1 29 0;
 #X connect 28 0 31 0;
 #X connect 28 0 32 0;
+#X connect 28 0 42 0;
 #X connect 32 0 33 0;
 #X connect 33 0 34 0;
 #X connect 34 0 35 0;
@@ -85,3 +99,13 @@
 #X connect 35 0 36 0;
 #X connect 36 1 37 0;
 #X connect 37 0 35 0;
+#X connect 39 0 41 0;
+#X connect 40 0 41 1;
+#X connect 41 0 38 0;
+#X connect 41 0 38 1;
+#X connect 42 0 46 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 45 0 47 0;
+#X connect 46 0 43 0;
+#X connect 47 0 40 0;
