@@ -16,12 +16,11 @@ ModifierButtonHandler _modifierButton(PIN_BUTTON_MODIFIER);
 TempoPotHandler _tempoPot(PIN_POT_TEMPO);
 
 
-
 /**
  * If true, the pedal is only active while the button is held.
  * If false, on/off button works as a toggle.
  */
-bool momentary = false;
+bool momentary = true;
 
 bool active = !momentary;
 
@@ -55,9 +54,21 @@ void applyState() {
 void setActive(bool _active) {
   active = _active;
 
-  if (!_active) {
+  if (active) {
+    Pedal::setPatch(DEFAULT_PATCH);
+    reset();
+    applyState();
+  }
+
+  else {
+    Pedal::off();
     LED::off();
   }
+}
+
+void reset() {
+  Tempo::reset();
+  Sequencer::reset();
 }
 
 void setupInputHandlers() {

@@ -41,11 +41,12 @@ const double QUANTIZED_POSITIONS[] = {
 
 
 namespace Pedal {
-  void setPatch(int patchID);
+  void setPatch(uint8_t patchID);
   void setPosition(double position);
   void setMaxPosition(double max);
+  void off();
   
-  int getPatch();
+  uint8_t getPatch();
   double getPosition();
   double getMaxPosition();
 

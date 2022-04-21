@@ -3,20 +3,20 @@
 
 #include "./src/pedal/patches.h"
 
-#define MAX_TEMPO 800.0
-#define MIN_TEMPO 1.0
-#define TEMPO_RANGE (MAX_TEMPO - MIN_TEMPO)
+const double MAX_TEMPO = 800.0;
+const double MIN_TEMPO = 1.0;
+const double TEMPO_RANGE = (MAX_TEMPO - MIN_TEMPO);
 
-#define DEFAULT_PATCH PATCH_WHAMMY_PLUS_ONE
-#define DEFAULT_POSITION 127
+const uint8_t DEFAULT_PATCH = PATCH_WHAMMY_PLUS_ONE;
+const double DEFAULT_POSITION = 127.0;
 
-#define PIN_BUTTON_ON_OFF 9
-#define PIN_BUTTON_MODIFIER 5
-#define PIN_BUTTON_MODE 7
+const uint8_t PIN_BUTTON_ON_OFF = 9;
+const uint8_t PIN_BUTTON_MODIFIER = 5;
+const uint8_t PIN_BUTTON_MODE = 7;
 
-#define PIN_POT_TEMPO 6
-#define PIN_LED 11
+const uint8_t PIN_POT_TEMPO = 6;
+const uint8_t PIN_LED = 11;
 
-#define MAX_BRIGHTNESS 90
+const uint8_t MAX_BRIGHTNESS = 90;
 
 #endif

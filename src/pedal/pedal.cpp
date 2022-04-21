@@ -5,13 +5,13 @@
 
 namespace Pedal {
   namespace {
-    int currentPatch = 3;
-    double currentPosition = 0;
+    uint8_t currentPatch = PATCH_WHAMMY_PLUS_ONE;
+    double currentPosition = 0.0;
     double maxPosition = 127.0;
 
     void sendPatch() {
       Serial.write(COMMAND_PATCH_CHANGE);
-      Serial.write(PATCHES[currentPatch]);
+      Serial.write(currentPatch);
     }
 
     void sendPosition() {
@@ -21,8 +21,14 @@ namespace Pedal {
     }
   }
 
-  void setPatch(int patchID) {
+  void setPatch(uint8_t patchID) {
     currentPatch = patchID;
+  }
+
+  void off() {
+    currentPatch = PATCH_OFF;
+    currentPosition = 0.0;
+    apply();
   }
 
   void setPosition(double position) {
@@ -42,7 +48,7 @@ namespace Pedal {
     }
   }
 
-  int getPatch() {
+  uint8_t getPatch() {
     return currentPatch;
   }
 

@@ -34,4 +34,8 @@ namespace Tempo {
       lastStep = Frame::getTime();
     }
   }
+
+  void reset() {
+    lastStep = Frame::getTime();
+  }
 }

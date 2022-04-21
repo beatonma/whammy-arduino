@@ -11,6 +11,9 @@ namespace Tempo {
    * Run the given function on each pulse.
    */
   void onPulse( void (*f)(), double multiplier);
+
+  // Reset tempo pulse 'start point'.
+  void reset();
 }
 
 #endif

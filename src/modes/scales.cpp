@@ -17,11 +17,11 @@ namespace Scale {
       Scale::locrian,
     };
 
-    void nextNote() {
-      noteIndex = (noteIndex + 1) % 8;
-    }
+    // void nextNote() {
+    //   noteIndex = (noteIndex + 1) % 8;
+    // }
 
-    void anyNote() {
+    void _anyNote() {
       noteIndex = rand() % 8;
     }
   }
@@ -31,8 +31,13 @@ namespace Scale {
   }
 
   void scale() {
-    Tempo::onPulse(anyNote, 0.25);
+    Tempo::onPulse(_anyNote, 0.25);
     Pedal::setPosition((*SCALES)[scaleIndex][noteIndex]);
+  }
+
+  double anyNote() {
+    noteIndex = rand() % 8;
+    return (*SCALES)[scaleIndex][noteIndex];
   }
 
   void nextScale() {
