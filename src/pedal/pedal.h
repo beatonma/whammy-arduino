@@ -4,23 +4,23 @@
 #include "./midi.h"
 #include "./patches.h"
 
-#define POSITION_NULL -1
-
 #define POSITION_SEMITONE 127.0 / 12.0
 #define semitones(N) (POSITION_SEMITONE * (double) N)
-#define POSITION_ROOT 0.0
-#define POSITION_MINOR_SECOND semitones(1)
-#define POSITION_MAJOR_SECOND semitones(2)
-#define POSITION_MINOR_THIRD semitones(3)
-#define POSITION_MAJOR_THIRD semitones(4)
-#define POSITION_PERFECT_FOURTH semitones(5)
-#define POSITION_TRITONE semitones(6)
-#define POSITION_PERFECT_FIFTH semitones(7)
-#define POSITION_MINOR_SIXTH semitones(8)
-#define POSITION_MAJOR_SIXTH semitones(9)
-#define POSITION_MINOR_SEVENTH semitones(10)
-#define POSITION_MAJOR_SEVENTH semitones(11)
-#define POSITION_OCTAVE semitones(12)
+
+const double POSITION_NULL = -1;
+const double POSITION_ROOT = 0.0;
+const double POSITION_MINOR_SECOND = semitones(1);
+const double POSITION_MAJOR_SECOND = semitones(2);
+const double POSITION_MINOR_THIRD = semitones(3);
+const double POSITION_MAJOR_THIRD = semitones(4);
+const double POSITION_PERFECT_FOURTH = semitones(5);
+const double POSITION_TRITONE = semitones(6);
+const double POSITION_PERFECT_FIFTH = semitones(7);
+const double POSITION_MINOR_SIXTH = semitones(8);
+const double POSITION_MAJOR_SIXTH = semitones(9);
+const double POSITION_MINOR_SEVENTH = semitones(10);
+const double POSITION_MAJOR_SEVENTH = semitones(11);
+const double POSITION_OCTAVE = semitones(12);
 
 const double QUANTIZED_POSITIONS[] = {
   POSITION_ROOT,
@@ -37,7 +37,7 @@ const double QUANTIZED_POSITIONS[] = {
   POSITION_MAJOR_SEVENTH,
   POSITION_OCTAVE,
 };
-#define NUM_QUANTIZED_POSITIONS 13
+const uint8_t NUM_QUANTIZED_POSITIONS = 13;
 
 
 namespace Pedal {
