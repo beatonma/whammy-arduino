@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <EEPROM.h>
 #include "./config.h"
 #include "./src/led/led.h"
 #include "./src/modes/modes.h"
@@ -9,6 +10,7 @@
 #include "./src/modes/scales.h"
 #include "./src/modes/sequencer.h"
 
+const uint8_t EEPROM_MOMENTARY = 0;
 
 OnOffButtonHandler _onOffButton(PIN_BUTTON_ON_OFF);
 ModeButtonHandler _modeButton(PIN_BUTTON_MODE);
@@ -22,16 +24,15 @@ TempoPotHandler _tempoPot(PIN_POT_TEMPO);
  */
 bool momentary = true;
 
-bool active = !momentary;
+bool active = false;
 
 void setup() {
-  Serial.begin(31250);
+  momentary = EEPROM.read(EEPROM_MOMENTARY);
 
+  Serial.begin(31250);
   pinMode(PIN_LED, OUTPUT);
-  LED::on();
   setupInputHandlers();
-  delay(100);
-  LED::off();
+  flashLED();
 
   applyState();
 }
@@ -43,6 +44,14 @@ void loop() {
   if (active) {
     Mode::run();
     applyState();
+  }
+}
+
+void flashLED() {
+  for (int i = 0; i < 3; i++) {
+    LED::on();
+    delay(100);
+    LED::off();
   }
 }
 
@@ -88,7 +97,9 @@ void updateInputHandlers() {
 void OnOffButtonHandler::onButtonPressed(void) {
   if (_modifierButton.isDown()) {
     momentary = !momentary;
+    EEPROM.update(EEPROM_MOMENTARY, momentary);
     setActive(false);
+    flashLED();
   }
   else {
     setActive(!active);
