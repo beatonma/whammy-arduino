@@ -24,13 +24,13 @@ TempoPotHandler _tempoPot(PIN_POT_TEMPO);
  */
 bool momentary = true;
 
-bool active = false;
+bool active = true;
 
 void setup() {
   momentary = EEPROM.read(EEPROM_MOMENTARY);
 
   Serial.begin(31250);
-  pinMode(PIN_LED, OUTPUT);
+  LED::setup();
   setupInputHandlers();
   flashLED();
 
