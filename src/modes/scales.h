@@ -3,17 +3,17 @@
 
 #include "../pedal/pedal.h"
 
-const uint8_t NUM_SCALES = 7;
-
-const uint8_t MODE_IONIAN = 0;
-const uint8_t MODE_DORIAN = 1;
-const uint8_t MODE_PHRYGIAN = 2;
-const uint8_t MODE_LYDIAN = 3;
-const uint8_t MODE_MIXOLYDIAN = 4;
-const uint8_t MODE_AEOLIAN = 5;
-const uint8_t MODE_LOCRIAN = 6;
-
 namespace Scale {
+  const uint8_t NUM_SCALES = 7;
+
+  const uint8_t MODE_IONIAN = 0;
+  const uint8_t MODE_DORIAN = 1;
+  const uint8_t MODE_PHRYGIAN = 2;
+  const uint8_t MODE_LYDIAN = 3;
+  const uint8_t MODE_MIXOLYDIAN = 4;
+  const uint8_t MODE_AEOLIAN = 5;
+  const uint8_t MODE_LOCRIAN = 6;
+
   const double ionian[8] = {
     POSITION_ROOT,
     POSITION_MAJOR_SECOND,
@@ -93,8 +93,8 @@ namespace Scale {
 
   const double** getScale();
   double anyNote();
-  void scale();
-  void nextScale();
+  void run();
+  void next();
   void anyScale();
 }
 

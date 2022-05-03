@@ -17,10 +17,6 @@ namespace Scale {
       Scale::locrian,
     };
 
-    // void nextNote() {
-    //   noteIndex = (noteIndex + 1) % 8;
-    // }
-
     void _anyNote() {
       noteIndex = rand() % 8;
     }
@@ -30,7 +26,7 @@ namespace Scale {
     return SCALES[scaleIndex];
   }
 
-  void scale() {
+  void run() {
     Tempo::onPulse(_anyNote, 0.25);
     Pedal::setPosition((*SCALES)[scaleIndex][noteIndex]);
   }
@@ -40,7 +36,7 @@ namespace Scale {
     return (*SCALES)[scaleIndex][noteIndex];
   }
 
-  void nextScale() {
+  void next() {
     scaleIndex = (scaleIndex + 1) % NUM_SCALES;
   }
 
