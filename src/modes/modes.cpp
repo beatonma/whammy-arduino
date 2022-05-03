@@ -6,10 +6,10 @@
 #include "../modes/modes.h"
 #include "../pedal/pedal.h"
 #include "./chaos.h"
-#include "./sawtooth.h"
-#include "./continuous.h"
 #include "./sequencer.h"
 #include "./scales.h"
+#include "./waves.h"
+#include "../led/led.h"
 
 namespace Mode {
   namespace {
@@ -24,49 +24,44 @@ namespace Mode {
   void run(uint8_t modeID) {
       switch (modeID) {
         case MODE_RANDOM_POSITION:
+          LED::green();
           Chaos::randomPosition();
           break;
 
         case MODE_SCALE:
-          Scale::scale();
+          LED::magenta();
+          Scale::run();
           break;
 
         case MODE_RANDOM_POSITION_STUTTER:
+          LED::green();
           Chaos::randomPositionWithStutter();
           break;
 
-        case MODE_SAW_UP:
-          Sawtooth::sawUp();
-          break;
-
-        case MODE_SAW_DOWN:
-          Sawtooth::sawDown();
-          break;
-
-        case MODE_TRIANGLE:
-          Continuous::triangle();
-          break;
-        
-        case MODE_SINE:
-          Continuous::sine();
-          break;
-
         case MODE_SEQUENCER:
+          LED::red();
           Sequencer::step();
           break;
         
         case MODE_RANDOM_PATCH_AND_POSITION:
+          LED::green();
           Chaos::randomPatchAndPosition();
           break;
         
         case MODE_TRUE_CHAOS:
+          LED::green();
           Tempo::onPulse(&runAny, 1.0);
+          break;
+
+        case MODE_WAVES:
+          LED::blue();
+          Waves::run();
           break;
       }
     }
 
   void runAny() {
-    run(MODES[rand() % (NUM_MODES - 2)]); // Any mode except MOTP
+    run(MODES[rand() % (NUM_MODES - 1)]); // Any mode except TRUE_CHAOS
   }
 
   void next() {

@@ -7,7 +7,7 @@ namespace LED {
     int currentBrightness = MAX_BRIGHTNESS;
     double _red = 0.0;
     double _green = 0.0;
-    double _blue = 255.0;
+    double _blue = 0.0;
 
     void setRgb(double r, double g, double b) {
       _red = r;
@@ -15,7 +15,7 @@ namespace LED {
       _blue = b;
     }
 
-    double normalize(uint8_t value) {
+    double normalize(int value) {
       return (double) value / 255.0;
     }
 
@@ -24,9 +24,6 @@ namespace LED {
       analogWrite(PIN_LED_RED, _red * brightness);
       analogWrite(PIN_LED_GREEN, _green * brightness);
       analogWrite(PIN_LED_BLUE, _blue * brightness);
-      // analogWrite(PIN_LED_RED, 800);
-      // analogWrite(PIN_LED_GREEN, 800);
-      // analogWrite(PIN_LED_BLUE, 800);
     }
 
     void flash() {
