@@ -5,23 +5,26 @@ A MIDI controller for the Digitech Whammy IV effects pedal.
 [Demo on Youtube](https://www.youtube.com/watch?v=WNatA7jqHCU "Nauseating audio demo")
 
 <span>
-  <img src="https://user-images.githubusercontent.com/12682046/164094312-056a5869-a076-41b6-8458-f2a05f56958b.jpg" width="300" alt="Pedal externals" />
-  <img src="https://user-images.githubusercontent.com/12682046/164094408-1f04eb69-766c-47b1-8ecb-b9c5890650ef.jpg" width="300" alt="Pedal guts" />
+  <img src="https://user-images.githubusercontent.com/12682046/166830486-349c0bfd-688f-4219-9405-855be94ce52e.jpg" width="300" alt="Pedal externals" />
+  <img src="https://user-images.githubusercontent.com/12682046/166830256-3dd194d0-3b77-40a5-a1a9-1d1ff3e3b783.jpg" width="300" alt="Pedal guts"/>
 </span>
 
-The implementation currently provides these modes:
 
-- Saw up: / / / / / / /
-- Saw down: \ \ \ \ \ \ \
-- Triangle: / \ / \ / \ /
-- Sine: like triangle but curvier.
-- Square: _ - _ - _ - _
-- "Map of the Problematique" sequencer.
-- Randomisers:
-  - Quantized to a musical mode e.g. Phrygian, Lydian...
-  - Unquantized, any pedal position. Bleep bloop.
-  - Unquantized, any pedal position, any patch.
-  - Chaos randomiser, applying any of the other modes randomly.
+The implementation currently provides these modes:
+- Active (LED blue): Ramp towards toe-down when active, ramp towards heel-down when inactive.
+- Waves (LED white):
+  - Sine: ramp up and down following a nice smooth sine wave `/‾\_/‾\_`
+  - Sawtooth up: linear ramp up, immediate return to zero `//// `
+  - Sawtooth down: linear ramp down, immediate return to maximum `\\\\ 
+  - Triangle: linear ramp up and down `/\/\/`
+- Sequencer (LED red):
+  - Square `_‾_‾`
+  - "Map of the Problemaque"
+  - Octaves `-2`, `-1`, `0`, `+1`, `+2`
+  - Random sequence
+- Scale (LED yellow): Random pedal positions quantised to a musical mode (Phrygian, Lydian, etc)
+- Random position (LED green): unquantised, random pedal positions.
+- 'Chaos' (LED cyan): random selection from the above modes.
 
 ### Hardware
 
@@ -29,13 +32,13 @@ The implementation currently provides these modes:
 - 3 momentary buttons
 - One linear potentiometer
 - MIDI port
-- LED
+- RGB LED
 - A few resistors, wire, case, etc.
 
 ### Controls
 
 **On/off**: activate the pedal.  
-**Modifier + On/off**: Toggle between momentary and latching activation. Default: momentary.
+**Modifier + On/off**: Toggle between momentary and latching activation. Momentary/latching mode persists in EEPROM between sessions so you don't need to change it every time.
 
 **Mode**: move to the next pedal mode.  
 **Modifier + Mode**: move to previous mode.
