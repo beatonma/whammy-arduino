@@ -9,6 +9,7 @@
 #include "./src/inputs.h"
 #include "./src/modes/scales.h"
 #include "./src/modes/sequencer.h"
+#include "./src/modes/waves.h"
 
 const uint8_t EEPROM_MOMENTARY = 0;
 
@@ -23,8 +24,6 @@ TempoPotHandler _tempoPot(PIN_POT_TEMPO);
  * If false, on/off button works as a toggle.
  */
 bool momentary = true;
-
-bool active = true;
 
 void setup() {
   momentary = EEPROM.read(EEPROM_MOMENTARY);
@@ -41,17 +40,20 @@ void loop() {
   Frame::setTimestamp(millis());
   updateInputHandlers();
 
-  if (active) {
-    Mode::run();
+  Mode::run();
+
+  if (Pedal::getActive() || Mode::isContinuous()) {
     applyState();
   }
 }
 
 void flashLED() {
+  LED::white();
   for (int i = 0; i < 3; i++) {
     LED::on();
     delay(100);
     LED::off();
+    delay(100);
   }
 }
 
@@ -61,17 +63,21 @@ void applyState() {
 }
 
 void setActive(bool _active) {
-  active = _active;
+  Pedal::setActive(_active);
 
-  if (active) {
-    Pedal::setPatch(DEFAULT_PATCH);
+  if (_active) {
+    if (!Mode::isContinuous()) {
+      Pedal::on();
+    }
     reset();
     applyState();
   }
 
   else {
-    Pedal::off();
-    LED::off();
+    if (!Mode::isContinuous()) {
+      Pedal::off();
+      LED::off();
+    }
   }
 }
 
@@ -102,7 +108,7 @@ void OnOffButtonHandler::onButtonPressed(void) {
     flashLED();
   }
   else {
-    setActive(!active);
+    setActive(!Pedal::getActive());
   }
 }
 
@@ -116,8 +122,9 @@ void TempoPotHandler::onProgressChanged(double progress) {
 }
 
 void ModifierButtonHandler::onButtonPressed(void) {
-  Scale::nextScale();
+  Scale::next();
   Sequencer::next();
+  Waves::next();
 }
 
 void OnOffButtonHandler::onButtonDown(void) {

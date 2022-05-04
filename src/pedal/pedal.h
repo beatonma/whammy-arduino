@@ -44,11 +44,16 @@ namespace Pedal {
   void setPatch(uint8_t patchID);
   void setPosition(double position);
   void setMaxPosition(double max);
+  void on();
+  void coerceOn(); // Turn on if not already on.
   void off();
   
   uint8_t getPatch();
   double getPosition();
   double getMaxPosition();
+
+  void setActive(bool active);
+  bool getActive();
 
   /**
    * Send the current patch and position to the actual pedal.

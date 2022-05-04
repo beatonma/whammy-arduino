@@ -12,8 +12,10 @@ const uint8_t MODE_RANDOM_PATCH_AND_POSITION = 7;
 const uint8_t MODE_TRUE_CHAOS = 8;
 const uint8_t MODE_SCALE = 9;
 const uint8_t MODE_WAVES = 10; // Triangle, sine, saw-up, saw-down.
+const uint8_t MODE_ACTIVE = 11; // Ramp up when active, down when released.
 
 const uint8_t MODES[] = {
+  MODE_ACTIVE,
   MODE_WAVES, // Sine, saw-up, saw-down, triangle.
   MODE_SEQUENCER,
   MODE_SCALE,       // Move pedal to simulate a mode e.g. phyrigian.
@@ -30,6 +32,12 @@ namespace Mode {
   void run(uint8_t modeID);
   void next();
   void previous();
+
+  /**
+   * Return true if the current mode should be applied even
+   * when Pedal::getActive() is false.
+   */
+  bool isContinuous();
 }
 
 #endif

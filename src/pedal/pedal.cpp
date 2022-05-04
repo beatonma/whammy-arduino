@@ -2,12 +2,15 @@
 #include "./pedal.h"
 #include "./patches.h"
 #include "./midi.h"
+#include "../../config.h"
 
 namespace Pedal {
   namespace {
-    uint8_t currentPatch = PATCH_WHAMMY_PLUS_ONE;
+    uint8_t activePatch = DEFAULT_PATCH;
+    uint8_t currentPatch = PATCH_NULL;
     double currentPosition = 0.0;
     double maxPosition = 127.0;
+    uint8_t isActive = false;
 
     void sendPatch() {
       Serial.write(COMMAND_PATCH_CHANGE);
@@ -22,12 +25,24 @@ namespace Pedal {
   }
 
   void setPatch(uint8_t patchID) {
+    if (patchID != PATCH_OFF && patchID != PATCH_NULL) {
+      activePatch = patchID;
+    }
     currentPatch = patchID;
   }
 
+  void on() {
+    setPatch(activePatch);;
+  }
+
+  void coerceOn() {
+    if (currentPatch == PATCH_OFF) {
+      on();
+    }
+  }
+
   void off() {
-    currentPatch = PATCH_OFF;
-    currentPosition = 0.0;
+    setPatch(PATCH_OFF);
     apply();
   }
 
@@ -37,6 +52,14 @@ namespace Pedal {
 
   void setMaxPosition(double max) {
     maxPosition = max;
+  }
+
+  void setActive(bool active) {
+    isActive = active;
+  }
+
+  bool getActive() {
+    return isActive;
   }
 
   void apply() {
