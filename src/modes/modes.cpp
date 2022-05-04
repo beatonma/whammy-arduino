@@ -23,12 +23,20 @@ namespace Mode {
   }
 
   void run(uint8_t modeID) {
-    // Randomisers: green
-    // Sequencer: red
     switch (modeID) {
-      case MODE_RANDOM_POSITION:
-        LED::green();
-        Chaos::randomPosition();
+      case MODE_ACTIVE:
+        LED::blue();
+        Active::run();
+        break;
+
+      case MODE_WAVES:
+        LED::white();
+        Waves::run();
+        break;
+
+      case MODE_SEQUENCER:
+        LED::red();
+        Sequencer::step();
         break;
 
       case MODE_SCALE:
@@ -36,14 +44,14 @@ namespace Mode {
         Scale::run();
         break;
 
+      case MODE_RANDOM_POSITION:
+        LED::green();
+        Chaos::randomPosition();
+        break;
+
       case MODE_RANDOM_POSITION_STUTTER:
         LED::green();
         Chaos::randomPositionWithStutter();
-        break;
-
-      case MODE_SEQUENCER:
-        LED::red();
-        Sequencer::step();
         break;
       
       case MODE_RANDOM_PATCH_AND_POSITION:
@@ -52,18 +60,8 @@ namespace Mode {
         break;
       
       case MODE_TRUE_CHAOS:
-        LED::green();
+        LED::cyan();
         Tempo::onPulse(&runAny, 1.0);
-        break;
-
-      case MODE_WAVES:
-        LED::blue();
-        Waves::run();
-        break;
-      
-      case MODE_ACTIVE:
-        LED::red();
-        Active::run();
         break;
     }
   }

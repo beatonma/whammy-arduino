@@ -17,7 +17,7 @@ const uint8_t PIN_BUTTON_MODE = 6;
 const uint8_t PIN_POT_TEMPO = 4;
 const uint8_t PIN_LED_RED = 10;
 const uint8_t PIN_LED_GREEN = 9;
-const uint8_t PIN_LED_BLUE = 7;
+const uint8_t PIN_LED_BLUE = 5;
 
 const uint8_t MAX_BRIGHTNESS = 180;
 
