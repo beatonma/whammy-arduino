@@ -28,6 +28,7 @@ The implementation currently provides these modes:
 
 ### Hardware
 
+- [Wiring diagram here](./wiring-diagram.svg)
 - Arduino Nano clone
 - 3 momentary buttons
 - One linear potentiometer
