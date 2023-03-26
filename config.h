@@ -11,13 +11,13 @@ const uint8_t DEFAULT_PATCH = PATCH_WHAMMY_PLUS_ONE;
 const double DEFAULT_POSITION = 127.0;
 
 const uint8_t PIN_BUTTON_ON_OFF = 4;
-const uint8_t PIN_BUTTON_MODIFIER = 8;
+const uint8_t PIN_BUTTON_MODIFIER = 5;
 const uint8_t PIN_BUTTON_MODE = 6;
 
 const uint8_t PIN_POT_TEMPO = 4;
-const uint8_t PIN_LED_RED = 10;
-const uint8_t PIN_LED_GREEN = 9;
-const uint8_t PIN_LED_BLUE = 5;
+const uint8_t PIN_LED_RED = 11;
+const uint8_t PIN_LED_GREEN = 10;
+const uint8_t PIN_LED_BLUE = 9;
 
 const uint8_t MAX_BRIGHTNESS = 180;
 
