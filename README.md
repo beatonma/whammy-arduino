@@ -19,7 +19,7 @@ The implementation currently provides these modes:
   - Triangle: linear ramp up and down `/\/\/`
 - Sequencer (LED red):
   - Square `_‾_‾`
-  - "Map of the Problemaque"
+  - "Map of the Problematique"
   - Octaves `-2`, `-1`, `0`, `+1`, `+2`
   - Random sequence
 - Scale (LED yellow): Random pedal positions quantised to a musical mode (Phrygian, Lydian, etc)
