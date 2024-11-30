@@ -149,17 +149,17 @@ void ModeButtonHandler::onButtonDown(void) {
 }
 
 void ModeButtonHandler::onButtonPressed(void) {
-  
+
 }
 
 void ModeButtonHandler::onButtonUp(void) {
-  
+
 }
 
 void ModifierButtonHandler::onButtonDown(void) {
-  
+
 }
 
 void ModifierButtonHandler::onButtonUp(void) {
-  
+
 }
