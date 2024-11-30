@@ -3,29 +3,56 @@
 
 #include <stdint.h>
 
-const uint8_t PATCH_NULL = 111;
-const uint8_t PATCH_OFF = 20;
+#if PEDAL_HARDWARE == WHAMMY_DT
+  const uint8_t PATCH_NULL = 111;
+  const uint8_t PATCH_OFF = 42;
 
-// RIGHT SIDE PATCHES
-const uint8_t PATCH_DETUNE_SHALLOW = 0;
-const uint8_t PATCH_DETUNE_DEEP = 1;
-const uint8_t PATCH_WHAMMY_PLUS_TWO = 2;
-const uint8_t PATCH_WHAMMY_PLUS_ONE = 3;
-const uint8_t PATCH_WHAMMY_MINUS_ONE = 4;
-const uint8_t PATCH_WHAMMY_MINUS_TWO = 5;
-const uint8_t PATCH_WHAMMY_DIVE_BOMB = 6;
-const uint8_t PATCH_WHAMMY_DROP_TUNE = 7;
+  const uint8_t PATCH_DETUNE_SHALLOW = 12;
+  const uint8_t PATCH_DETUNE_DEEP = 11;
 
-// LEFT-SIDE PATCHES
-const uint8_t PATCH_HARMONY_OCTAVE = 16;
-const uint8_t PATCH_DOWN_HARMONY_FIFTH_FOURTH = 15;
-const uint8_t PATCH_DOWN_HARMONY_FOURTH_THIRD = 14;
-const uint8_t PATCH_UP_HARMONY_FIFTH_SEVENTH = 13;
-const uint8_t PATCH_UP_HARMONY_FIFTH_SIXTH = 12;
-const uint8_t PATCH_UP_HARMONY_FOURTH_FIFTH = 11;
-const uint8_t PATCH_UP_HARMONY_THIRD_FOURTH = 10;
-const uint8_t PATCH_UP_HARMONY_THIRD_THIRD = 9;
-const uint8_t PATCH_UP_HARMONY_SECOND_THIRD = 8;
+  const uint8_t PATCH_WHAMMY_PLUS_TWO = 1;
+  const uint8_t PATCH_WHAMMY_PLUS_ONE = 2;
+  const uint8_t PATCH_WHAMMY_MINUS_ONE = 8;
+  const uint8_t PATCH_WHAMMY_MINUS_TWO = 9;
+  const uint8_t PATCH_WHAMMY_DIVE_BOMB = 10;
+  const uint8_t PATCH_WHAMMY_DROP_TUNE = 5;
+
+  const uint8_t PATCH_HARMONY_OCTAVE = 21;
+  const uint8_t PATCH_DOWN_HARMONY_FIFTH_FOURTH = 20;
+  const uint8_t PATCH_DOWN_HARMONY_FOURTH_THIRD = 19;
+  const uint8_t PATCH_UP_HARMONY_FIFTH_SEVENTH = 18;
+  const uint8_t PATCH_UP_HARMONY_FIFTH_SIXTH = 17;
+  const uint8_t PATCH_UP_HARMONY_FOURTH_FIFTH = 16;
+  const uint8_t PATCH_UP_HARMONY_THIRD_FOURTH = 15;
+  const uint8_t PATCH_UP_HARMONY_THIRD_THIRD = 14;
+  const uint8_t PATCH_UP_HARMONY_SECOND_THIRD = 13;
+  
+#else
+  // Default config for WHAMMY_IV
+  const uint8_t PATCH_NULL = 111;
+  const uint8_t PATCH_OFF = 20;
+
+  // RIGHT SIDE PATCHES
+  const uint8_t PATCH_DETUNE_SHALLOW = 0;
+  const uint8_t PATCH_DETUNE_DEEP = 1;
+  const uint8_t PATCH_WHAMMY_PLUS_TWO = 2;
+  const uint8_t PATCH_WHAMMY_PLUS_ONE = 3;
+  const uint8_t PATCH_WHAMMY_MINUS_ONE = 4;
+  const uint8_t PATCH_WHAMMY_MINUS_TWO = 5;
+  const uint8_t PATCH_WHAMMY_DIVE_BOMB = 6;
+  const uint8_t PATCH_WHAMMY_DROP_TUNE = 7;
+
+  // LEFT-SIDE PATCHES
+  const uint8_t PATCH_HARMONY_OCTAVE = 16;
+  const uint8_t PATCH_DOWN_HARMONY_FIFTH_FOURTH = 15;
+  const uint8_t PATCH_DOWN_HARMONY_FOURTH_THIRD = 14;
+  const uint8_t PATCH_UP_HARMONY_FIFTH_SEVENTH = 13;
+  const uint8_t PATCH_UP_HARMONY_FIFTH_SIXTH = 12;
+  const uint8_t PATCH_UP_HARMONY_FOURTH_FIFTH = 11;
+  const uint8_t PATCH_UP_HARMONY_THIRD_FOURTH = 10;
+  const uint8_t PATCH_UP_HARMONY_THIRD_THIRD = 9;
+  const uint8_t PATCH_UP_HARMONY_SECOND_THIRD = 8;
+#endif
 
 
 const uint8_t PATCHES[] = {

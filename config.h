@@ -1,6 +1,25 @@
 #ifndef H_CONFIG
 #define H_CONFIG
 
+/**
+ * IMPORTANT
+ *
+ * Pedal hardware selection.
+ *
+ * Different whammy pedal variants use different MIDI codes.
+ * Set PEDAL_HARDWARE to match your pedal from the options
+ * below.
+ */
+
+#define WHAMMY_IV 1 // Whammy IV, default
+#define WHAMMY_DT 2 // Whammy DT https://digitech.com/dp/whammy-dt/
+
+// // Change this to the pedal you are using from the options above
+#define PEDAL_HARDWARE WHAMMY_IV
+// /**
+//  * End of pedal hardware selection
+//  */
+
 #include "./src/pedal/patches.h"
 
 const double MAX_TEMPO = 800.0;
