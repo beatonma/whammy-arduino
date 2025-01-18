@@ -2,6 +2,7 @@
 #include "./pedal.h"
 #include "./patches.h"
 #include "./midi.h"
+#include "../modes/modes.h"
 #include "../../config.h"
 
 namespace Pedal {
@@ -63,12 +64,18 @@ namespace Pedal {
   }
 
   void apply() {
-    if (currentPatch != PATCH_NULL) {
-      sendPatch();
-    }
-    if (currentPosition != POSITION_NULL) {
-      sendPosition();
-    }
+    Serial.print(currentPatch);
+    Serial.print(" | ");
+    Serial.print(currentPosition);
+    Serial.print(" | ");
+    Serial.println(Mode::current());
+
+    // if (currentPatch != PATCH_NULL) {
+    //   sendPatch();
+    // }
+    // if (currentPosition != POSITION_NULL) {
+    //   sendPosition();
+    // }
   }
 
   uint8_t getPatch() {

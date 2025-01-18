@@ -32,6 +32,7 @@ namespace Mode {
   void run(uint8_t modeID);
   void next();
   void previous();
+  byte current();
 
   /**
    * Return true if the current mode should be applied even

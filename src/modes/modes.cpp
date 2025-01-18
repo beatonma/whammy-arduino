@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include "../../config.h"
@@ -16,6 +17,10 @@ namespace Mode {
   namespace {
     uint8_t currentModeIndex = 0;
     uint8_t currentModeID = MODES[currentModeIndex];
+  }
+
+  byte current() {
+    return currentModeIndex;
   }
 
   void run() {
@@ -53,12 +58,12 @@ namespace Mode {
         LED::green();
         Chaos::randomPositionWithStutter();
         break;
-      
+
       case MODE_RANDOM_PATCH_AND_POSITION:
         LED::green();
         Chaos::randomPatchAndPosition();
         break;
-      
+
       case MODE_TRUE_CHAOS:
         LED::cyan();
         Tempo::onPulse(&runAny, 1.0);
