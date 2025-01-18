@@ -34,8 +34,8 @@
     <rect
        x="256.87588"
        y="53.740115"
-       width="754.27799"
-       height="318.12861"
+       width="741.8145"
+       height="316.92647"
        id="rect17586" />
     <rect
        x="525.67487"
@@ -532,8 +532,8 @@
     <rect
        x="525.67487"
        y="463.52972"
-       width="405.13909"
-       height="97.176174"
+       width="395.55775"
+       height="95.310852"
        id="rect127783-6" />
     <rect
        x="525.67487"
@@ -610,14 +610,14 @@
     <rect
        x="525.67487"
        y="463.52972"
-       width="337.1915"
-       height="38.450378"
+       width="419.76209"
+       height="45.08969"
        id="rect127783-0-9-7" />
     <rect
        x="975.38672"
        y="621.62958"
-       width="43.12759"
-       height="18.753778"
+       width="58.60877"
+       height="26.946768"
        id="rect13225-3-9-5-3" />
     <rect
        x="861.39764"
@@ -628,8 +628,8 @@
     <rect
        x="975.38672"
        y="621.62958"
-       width="43.12759"
-       height="18.753778"
+       width="58.60877"
+       height="26.946768"
        id="rect13225-3-9-5-3-48" />
     <rect
        x="861.39764"
@@ -640,8 +640,8 @@
     <rect
        x="975.38672"
        y="621.62958"
-       width="43.12759"
-       height="18.753778"
+       width="58.60877"
+       height="26.946768"
        id="rect13225-3-9-5-3-94" />
     <rect
        x="861.39764"
@@ -677,10 +677,10 @@
        id="text127781-8"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
          x="525.67578"
-         y="497.42578"
-         id="tspan3185"><tspan
-           dx="0 9.6328125 9.6328125 9.6328125 9.6328125 9.6328125 9.6328125"
-           id="tspan3183">POTENTI</tspan></tspan></text>
+         y="497.15234"
+         id="tspan3939"><tspan
+           dx="0 8.796875 8.796875 8.796875 8.796875 8.796875 8.796875"
+           id="tspan3937">POTENTI</tspan></tspan></text>
   </g>
   <style
      id="style2281">:root { --stroke-width: 4px }</style>
@@ -706,8 +706,8 @@
      id="text58182-9-1-3"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-56-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3187">5V</tspan></text>
+       y="1208.1953"
+       id="tspan3941">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-5-0"
@@ -721,18 +721,18 @@
      id="text127781-70"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-97);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3191"><tspan
+       y="477.41211"
+       id="tspan3945"><tspan
          style="-inkscape-font-specification:'Consolas, monospace'"
-         id="tspan3189">Connect to 5V pin on Arduino.</tspan></tspan></text>
+         id="tspan3943">Connect to 5V pin on Arduino.</tspan></tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,83.07391,-266.3918)"
      id="text58182-9-9-77-4"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-46-9);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3193">GND</tspan></text>
+       y="1208.1953"
+       id="tspan3947">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-54-3"
@@ -746,18 +746,18 @@
      id="text127781-70-9"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-97-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3197"><tspan
+       y="477.41211"
+       id="tspan3951"><tspan
          style="-inkscape-font-specification:'Consolas, monospace'"
-         id="tspan3195">Connect to GND pin on Arduino.</tspan></tspan></text>
+         id="tspan3949">Connect to GND pin on Arduino.</tspan></tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,171.93192,-59.140773)"
      id="text127781-68-4"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-9);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3199">TX1</tspan></text>
+       y="477.41211"
+       id="tspan3953">TX1</tspan></text>
   <path
      id="rect181751-7"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -768,22 +768,22 @@
      id="text127781-70-9-1"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-97-6-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3205"><tspan
+       y="477.41211"
+       id="tspan3959"><tspan
          style="-inkscape-font-specification:'Consolas, monospace'"
-         id="tspan3201">Connect to named pin on </tspan><tspan
+         id="tspan3955">Connect to named pin on </tspan><tspan
          style="-inkscape-font-specification:'Consolas, monospace'"
-         id="tspan3203">Arduino.</tspan></tspan></text>
+         id="tspan3957">Arduino.</tspan></tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,186.96726,-44.587843)"
      id="text127781-70-9-1-5"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-97-6-6-3);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3209"><tspan
+       y="477.41211"
+       id="tspan3963"><tspan
          style="-inkscape-font-specification:'Consolas, monospace'"
-         id="tspan3207">Resistor of given value.</tspan></tspan></text>
+         id="tspan3961">Resistor of given value.</tspan></tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect3175-7-9-9-2-9"
@@ -798,16 +798,16 @@
      id="text13223-5-0-6-23-3"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-18-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3211">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan3965">220Ω</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,186.96725,-31.182129)"
      id="text127781-70-9-1-5-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-97-6-6-3-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3213">Momentary button/switch.</tspan></text>
+       y="477.41211"
+       id="tspan3967">Momentary button/switch.</tspan></text>
   <circle
      cx="309.53198"
      cy="97.241882"
@@ -840,8 +840,8 @@
      id="text127781-4-9"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3215">KEY</tspan></text>
+       y="491.29492"
+       id="tspan3969">KEY</tspan></text>
   <rect
      style="fill:none;stroke:#1201d1;stroke-width:0.210933;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.210933, 0.632796;stroke-dashoffset:0;stroke-opacity:1"
      id="rect4756-5-1-7-5"
@@ -858,8 +858,8 @@
        id="text127781-9"
        style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
          x="525.67578"
-         y="491.8418"
-         id="tspan3217">ARDUINO NANO</tspan></text>
+         y="491.29492"
+         id="tspan3971">ARDUINO NANO</tspan></text>
     <g
        id="g4702"
        transform="translate(3.6838762,-4.2126408)">
@@ -1101,8 +1101,8 @@
            id="text127781-60-0-3"
            style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-993-5-4);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
              x="525.67578"
-             y="477.68555"
-             id="tspan3219">D11</tspan></text>
+             y="477.41211"
+             id="tspan3973">D11</tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:0.265551px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 324.81316,359.96296 h 11"
@@ -1201,8 +1201,8 @@
      id="text13223-5-0-6"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3221">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan3975">220Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 63.2478,316.35021 H 52.3998"
@@ -1217,8 +1217,8 @@
      id="text58182-9-4"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-0);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3223">5V</tspan></text>
+       y="1208.1953"
+       id="tspan3977">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-4"
@@ -1236,8 +1236,8 @@
      id="text58182-9-9-77-8"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-46-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3225">GND</tspan></text>
+       y="1208.1953"
+       id="tspan3979">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-54-5"
@@ -1255,32 +1255,32 @@
      id="text127781-1-9"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-99-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3227">5</tspan></text>
+       y="477.41211"
+       id="tspan3981">5</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,-101.71195,178.30486)"
      id="text127781-1-0"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-99-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3229">2</tspan></text>
+       y="477.41211"
+       id="tspan3983">2</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,-101.7533,191.50563)"
      id="text127781-1-5"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-99-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3231">4</tspan></text>
+       y="477.41211"
+       id="tspan3985">4</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,-73.784456,165.04828)"
      id="text127781-68-1"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-0);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3233">TX1</tspan></text>
+       y="477.41211"
+       id="tspan3987">TX1</tspan></text>
   <path
      id="rect181751-0"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1299,8 +1299,8 @@
      id="text127781-4-2"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3235">MIDI JACK</tspan></text>
+       y="491.29492"
+       id="tspan3989">MIDI JACK</tspan></text>
   <rect
      style="fill:none;stroke:#6f6f6f;stroke-width:0.208527;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.208527, 0.625577;stroke-dashoffset:0"
      id="rect4756-5-1-7-9"
@@ -1334,8 +1334,8 @@
      id="text127781-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3237">RGB LED</tspan></text>
+       y="477.41211"
+       id="tspan3991">RGB LED</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect3175-7-9-9-5"
@@ -1350,8 +1350,8 @@
      id="text13223-5-0-6-8"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3239">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan3993">220Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 55.147789,198.76878 H 43.682464"
@@ -1374,8 +1374,8 @@
      id="text13223-5-0-6-1"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3241">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan3995">220Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 55.147789,214.16032 H 43.682464"
@@ -1398,8 +1398,8 @@
      id="text13223-5-0-6-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3243">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan3997">220Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 55.147789,229.55187 H 43.682464"
@@ -1414,8 +1414,8 @@
      id="text127781-68-56"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3245">D9</tspan></text>
+       y="477.41211"
+       id="tspan3999">D9</tspan></text>
   <path
      id="rect181751-50"
      style="stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1430,8 +1430,8 @@
      id="text58182-9-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3247">5V</tspan></text>
+       y="1208.1953"
+       id="tspan4001">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-9"
@@ -1449,8 +1449,8 @@
      id="text127781-68-3"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3249">D10</tspan></text>
+       y="477.41211"
+       id="tspan4003">D10</tspan></text>
   <path
      id="rect181751-8"
      style="stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1465,8 +1465,8 @@
      id="text127781-68-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3251">D11</tspan></text>
+       y="477.41211"
+       id="tspan4005">D11</tspan></text>
   <path
      id="rect181751-6"
      style="stroke:#000000;stroke-width:0.272007;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1493,33 +1493,33 @@
      id="text127781-29"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-6);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3255">THIS SHOWS WIRING FOR A <tspan
+       y="477.41211"
+       id="tspan4009">THIS SHOWS WIRING FOR A <tspan
    style="fill:#db0000"
-   id="tspan3253">COMMON ANODE</tspan> LED.
+   id="tspan4007">COMMON ANODE</tspan> LED.
 </tspan><tspan
        x="525.67578"
-       y="497.68555"
-       id="tspan3257">
+       y="497.41211"
+       id="tspan4011">
 </tspan><tspan
        x="525.67578"
-       y="517.68555"
-       id="tspan3259">IF YOU ARE USING A COMMON1 CATHODE LED, </tspan><tspan
+       y="517.41211"
+       id="tspan4013">IF YOU ARE USING A COMMON CATHODE LED, </tspan><tspan
        x="525.67578"
-       y="537.68555"
-       id="tspan3265">CONNECT THE LONG LEG TO <tspan
+       y="537.41211"
+       id="tspan4019">CONNECT THE LONG LEG TO <tspan
    style="font-weight:bold;-inkscape-font-specification:'Consolas,monospace Bold'"
-   id="tspan3261">GND</tspan> INSTEAD OF <tspan
+   id="tspan4015">GND</tspan> INSTEAD OF <tspan
    style="font-weight:bold;-inkscape-font-specification:'Consolas,monospace Bold'"
-   id="tspan3263">5V</tspan>.</tspan></text>
+   id="tspan4017">5V</tspan>.</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.27963992,0,0,0.26458333,-131.12988,9.0987507)"
      id="text127781-4-0"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3267">RGB LED</tspan></text>
+       y="491.29492"
+       id="tspan4021">RGB LED</tspan></text>
   <rect
      style="fill:none;stroke:#6f6f6f;stroke-width:0.245953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.245953, 0.737857;stroke-dashoffset:0"
      id="rect4756-5-1-7-1"
@@ -1531,72 +1531,72 @@
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,-60.010215,-7.7865846)"
      id="text17584"
-     style="font-size:40px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect17586);display:inline"><tspan
+     style="font-size:40px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect17586);display:inline"><tspan
        x="256.875"
-       y="89.130859"
-       id="tspan3271"><tspan
+       y="88.447266"
+       id="tspan4025"><tspan
          style="fill:#000000"
-         id="tspan3269">WHAMMY ARDUINO
+         id="tspan4023">WHAMMY ARDUINO
 </tspan></tspan><tspan
        x="256.875"
-       y="139.13086"
-       id="tspan3275"><tspan
+       y="138.44727"
+       id="tspan4029"><tspan
          style="font-size:24px;fill:#000000"
-         id="tspan3273">EACH INPUT/OUTPUT COMPONENT IS SHOWN SEPARATELY.
+         id="tspan4027">EACH INPUT/OUTPUT COMPONENT IS SHOWN SEPARATELY.
 </tspan></tspan><tspan
        x="256.875"
-       y="189.13086"
-       id="tspan3279"><tspan
+       y="188.44727"
+       id="tspan4033"><tspan
          style="font-size:24px;fill:#000000"
-         id="tspan3277">WIRES SHOULD BE ADDED TO CONNECT EACH LABELLED </tspan></tspan><tspan
+         id="tspan4031">WIRES SHOULD BE ADDED TO CONNECT EACH LABELLED </tspan></tspan><tspan
        x="256.875"
-       y="239.13086"
-       id="tspan3283"><tspan
+       y="238.44727"
+       id="tspan4037"><tspan
          style="font-size:24px;fill:#000000"
-         id="tspan3281">CONNECTION TO THE CORRESPONDING PIN OF THE ARDUINO.</tspan></tspan></text>
+         id="tspan4035">CONNECTION TO THE CORRESPONDING PIN OF THE ARDUINO.</tspan></tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,154.32457,22.91944)"
      id="text127781-0"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-68);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3285">(OPTIONAL)
+       y="477.41211"
+       id="tspan4039">(OPTIONAL)
 </tspan><tspan
        x="525.67578"
-       y="497.68555"
-       id="tspan3287">
+       y="497.41211"
+       id="tspan4041">
 </tspan><tspan
        x="525.67578"
-       y="517.68555"
-       id="tspan3289">ARDUINO CAN BE POWERED VIA USB CABLE, OR </tspan><tspan
+       y="517.41211"
+       id="tspan4043">ARDUINO CAN BE POWERED VIA USB CABLE, OR WITH A </tspan><tspan
        x="525.67578"
-       y="537.68555"
-       id="tspan3291">WITH A JACK-STYLE 7-12V POWER SOURCE.
+       y="537.41211"
+       id="tspan4045">JACK-STYLE 7-12V POWER SOURCE.
 </tspan><tspan
        x="525.67578"
-       y="557.68555"
-       id="tspan3293">
+       y="557.41211"
+       id="tspan4047">
 </tspan><tspan
        x="525.67578"
-       y="577.68555"
-       id="tspan3297">CONNECT THE POWER JACK CENTER PIN TO <tspan
+       y="577.41211"
+       id="tspan4051">CONNECT THE POWER JACK CENTER PIN TO <tspan
    style="font-weight:bold;-inkscape-font-specification:'Consolas,monospace Bold'"
-   id="tspan3295">GND</tspan>.
+   id="tspan4049">GND</tspan>.
 </tspan><tspan
        x="525.67578"
-       y="597.68555"
-       id="tspan3301">CONNECT POWER JACK SLEEVE TO <tspan
+       y="597.41211"
+       id="tspan4055">CONNECT POWER JACK SLEEVE TO <tspan
    style="font-weight:bold;-inkscape-font-specification:'Consolas,monospace Bold'"
-   id="tspan3299">VIN</tspan>.</tspan></text>
+   id="tspan4053">VIN</tspan>.</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,154.52866,9.0716)"
      id="text127781-4-6"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-74);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3303">POWER JACK</tspan></text>
+       y="491.29492"
+       id="tspan4057">POWER JACK</tspan></text>
   <rect
      style="fill:none;stroke:#6f6f6f;stroke-width:0.181427;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.181427, 0.544282;stroke-dashoffset:0"
      id="rect4756-5-1-7-90"
@@ -1610,8 +1610,8 @@
      id="text127781-4-4"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-3);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3305">LINEAR POTENTIOMETER</tspan></text>
+       y="491.29492"
+       id="tspan4059">LINEAR POTENTIOMETER</tspan></text>
   <rect
      style="fill:none;stroke:#6f6f6f;stroke-width:0.187541;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.187541, 0.562622;stroke-dashoffset:0"
      id="rect4756-5-1-7-47"
@@ -1625,8 +1625,8 @@
      id="text127781-68-5-3"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-2-2);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3307">A6</tspan></text>
+       y="477.41211"
+       id="tspan4061">A6</tspan></text>
   <path
      id="rect181751-29-8"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1641,8 +1641,8 @@
      id="text58182-9-96"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3309">5V</tspan></text>
+       y="1208.1953"
+       id="tspan4063">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-2"
@@ -1660,8 +1660,8 @@
      id="text58182-9-9-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-41);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3311">GND</tspan></text>
+       y="1208.1953"
+       id="tspan4065">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-5"
@@ -1712,8 +1712,8 @@
      id="text127781-68-2-4"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-6-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3313">D6</tspan></text>
+       y="477.41211"
+       id="tspan4067">D6</tspan></text>
   <path
      id="rect181751-5-52"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1732,8 +1732,8 @@
      id="text127781-68-2-7-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-6-6-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3315">D5</tspan></text>
+       y="477.41211"
+       id="tspan4069">D5</tspan></text>
   <path
      id="rect181751-5-5-4"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1752,8 +1752,8 @@
      id="text127781-68-2-3-0"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-93-6-7-4);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="477.68555"
-       id="tspan3317">D4</tspan></text>
+       y="477.41211"
+       id="tspan4071">D4</tspan></text>
   <path
      id="rect181751-5-2-7"
      style="stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1892,8 +1892,8 @@
      id="text58182-9-3-0"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-4-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3319">5V</tspan></text>
+       y="1208.1953"
+       id="tspan4073">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-8-4"
@@ -1911,16 +1911,16 @@
      id="text89015-71"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect89017-6);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
        x="821.50781"
-       y="1284.875"
-       id="tspan3321">ON/OFF</tspan></text>
+       y="1284.6016"
+       id="tspan4075">ON/OFF</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,70.528695,69.25319)"
      id="text58182-9-3-3-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-4-4-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3323">5V</tspan></text>
+       y="1208.1953"
+       id="tspan4077">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-8-0-2"
@@ -1938,16 +1938,16 @@
      id="text89015-7-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect89017-7-6);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
        x="821.50781"
-       y="1284.875"
-       id="tspan3325">MODE</tspan></text>
+       y="1284.6016"
+       id="tspan4079">MODE</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,70.528695,32.687729)"
      id="text58182-9-3-7-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-4-8-9);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3327">5V</tspan></text>
+       y="1208.1953"
+       id="tspan4081">5V</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-8-7-6"
@@ -1965,16 +1965,16 @@
      id="text89015-1-0"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect89017-1-3);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
        x="821.50781"
-       y="1284.875"
-       id="tspan3329">MODIFIER</tspan></text>
+       y="1284.6016"
+       id="tspan4083">MODIFIER</tspan></text>
   <text
      xml:space="preserve"
      transform="matrix(0.26458333,0,0,0.26458333,156.24577,170.05514)"
      id="text127781-4-8-6"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:Consolas, monospace;-inkscape-font-specification:'Consolas, monospace';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect127783-0-9-7);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"><tspan
        x="525.67578"
-       y="491.8418"
-       id="tspan3331">SWITCHES</tspan></text>
+       y="491.29492"
+       id="tspan4085">MOMENTARY PUSH BUTTONS</tspan></text>
   <rect
      style="fill:none;stroke:#6f6f6f;stroke-width:0.258103;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.258103, 0.774308;stroke-dashoffset:0"
      id="rect4756-5-1-7-0-1"
@@ -1992,12 +1992,12 @@
      transform="rotate(-90)" />
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,104.87569,228.4737)"
+     transform="matrix(0.26458333,0,0,0.26458333,104.13981,228.4737)"
      id="text13223-5-0-6-5"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-3);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3333">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan4087">1000Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 363.2149,400.07619 h -10.848"
@@ -2012,8 +2012,8 @@
      id="text58182-9-9-77-8-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-46-5-1);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3335">GND</tspan></text>
+       y="1208.1953"
+       id="tspan4089">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-54-5-0"
@@ -2035,12 +2035,12 @@
      transform="rotate(-90)" />
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,104.87569,191.89818)"
+     transform="matrix(0.26458333,0,0,0.26458333,104.13981,191.89818)"
      id="text13223-5-0-6-5-2"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-3-48);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3337">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan4091">1000Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 363.2149,363.50067 h -10.848"
@@ -2055,8 +2055,8 @@
      id="text58182-9-9-77-8-7-6"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-46-5-1-71);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3339">GND</tspan></text>
+       y="1208.1953"
+       id="tspan4093">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-54-5-0-1"
@@ -2078,12 +2078,12 @@
      transform="rotate(-90)" />
   <text
      xml:space="preserve"
-     transform="matrix(0.26458333,0,0,0.26458333,104.87569,155.4779)"
+     transform="matrix(0.26458333,0,0,0.26458333,104.13981,155.4779)"
      id="text13223-5-0-6-5-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect13225-3-9-5-3-94);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="975.38672"
-       y="635.78516"
-       id="tspan3341">220Ω</tspan></text>
+       y="635.51172"
+       id="tspan4095">1000Ω</tspan></text>
   <path
      style="fill:none;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 363.2149,327.08039 h -10.848"
@@ -2098,8 +2098,8 @@
      id="text58182-9-9-77-8-7-7"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect58184-7-2-46-5-1-9);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"><tspan
        x="861.39844"
-       y="1208.4688"
-       id="tspan3343">GND</tspan></text>
+       y="1208.1953"
+       id="tspan4097">GND</tspan></text>
   <rect
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect69028-2-7-54-5-0-7"
@@ -2117,6 +2117,6 @@
      id="text89015-1-0-9"
      style="font-style:normal;font-weight:normal;font-size:16px;line-height:1.25;font-family:Consolas, monospace;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect89017-1-3-5);display:inline;fill:#000000;fill-opacity:1;stroke:none"><tspan
        x="821.50781"
-       y="1284.875"
-       id="tspan3345">5KΩ</tspan></text>
+       y="1284.6016"
+       id="tspan4099">5KΩ</tspan></text>
 </svg>
