@@ -19,9 +19,9 @@ const uint8_t MODES[] = {
   MODE_WAVES, // Sine, saw-up, saw-down, triangle.
   MODE_SEQUENCER,
   MODE_SCALE,       // Move pedal to simulate a mode e.g. phyrigian.
-  // MODE_RANDOM_POSITION, // Move pedal to any position
+  MODE_RANDOM_POSITION, // Move pedal to any position
   MODE_RANDOM_POSITION_STUTTER,
-  // MODE_RANDOM_PATCH_AND_POSITION, // Move pedal to any position with any patch.
+  MODE_RANDOM_PATCH_AND_POSITION, // Move pedal to any position with any patch.
   MODE_TRUE_CHAOS,  // Randomly select a mode on every tempo pulse.
 };
 const uint8_t NUM_MODES = sizeof(MODES);
