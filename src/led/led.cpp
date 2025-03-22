@@ -16,14 +16,22 @@ namespace LED {
     }
 
     double normalize(int value) {
-      return (double) value / 255.0;
+      if (LED_COMMON_PIN == LED_COMMON_ANODE) {
+        return (double) value / 255.0;
+      }
+      else if (LED_COMMON_PIN == LED_COMMON_CATHODE) {
+        return 1.0 - ((double) value / 255.0);
+      }
+
+      // Invalid config
+      return 0.5;
     }
 
     void write() {
       const double brightness = normalize(currentBrightness);
-      analogWrite(PIN_LED_RED, _red * brightness);
-      analogWrite(PIN_LED_GREEN, _green * brightness);
-      analogWrite(PIN_LED_BLUE, _blue * brightness);
+      analogWrite(PIN_LED_RED, (int) (_red * brightness));
+      analogWrite(PIN_LED_GREEN, (int) (_green * brightness));
+      analogWrite(PIN_LED_BLUE, (int) (_blue * brightness));
     }
 
     void flash() {

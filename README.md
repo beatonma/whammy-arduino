@@ -26,8 +26,9 @@ The implementation currently provides these modes:
 - Random position (LED green): unquantised, random pedal positions.
 - 'Chaos' (LED cyan): random selection from the above modes.
 
-### Hardware
 
+### Hardware
+``
 - [Wiring diagram here](./wiring-diagram.svg)
 - Arduino Nano clone
 - 3 momentary buttons
@@ -35,6 +36,12 @@ The implementation currently provides these modes:
 - MIDI port
 - RGB LED
 - A few resistors, wire, case, etc.
+``
+
+### Configuration `config.h`
+
+- **Important**: Ensure that `LED_COMMON_PIN` is set correctly (`LED_COMMON_ANODE`|`LED_COMMON_CATHODE`) to match your hardware.
+
 
 ### Controls
 
@@ -50,6 +57,7 @@ The implementation currently provides these modes:
 **Modifier**: Tap to change the musical mode used in 'quantized scale' mode.
 
 In all modes, the LED brightness indicates the effective position of the pedal - brighter means toe-down, darker means heel-down.
+
 
 ### monitor.pd
 
