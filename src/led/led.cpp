@@ -5,6 +5,7 @@
 namespace LED {
   namespace {
     int currentBrightness = MAX_BRIGHTNESS;
+    double _normalizedBrightness = 0.5;
     double _red = 0.0;
     double _green = 0.0;
     double _blue = 0.0;
@@ -28,10 +29,10 @@ namespace LED {
     }
 
     void write() {
-      const double brightness = normalize(currentBrightness);
-      analogWrite(PIN_LED_RED, (int) (_red * brightness));
-      analogWrite(PIN_LED_GREEN, (int) (_green * brightness));
-      analogWrite(PIN_LED_BLUE, (int) (_blue * brightness));
+      _normalizedBrightness = normalize(currentBrightness);
+      analogWrite(PIN_LED_RED, (int) (_red * _normalizedBrightness));
+      analogWrite(PIN_LED_GREEN, (int) (_green * _normalizedBrightness));
+      analogWrite(PIN_LED_BLUE, (int) (_blue * _normalizedBrightness));
     }
 
     void flash() {

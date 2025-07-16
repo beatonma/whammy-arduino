@@ -4,7 +4,7 @@ A MIDI controller for the Digitech Whammy IV effects pedal.
 
 [Demo on Youtube](https://www.youtube.com/watch?v=WNatA7jqHCU "Nauseating audio demo")
 
-<span>
+<span>``
   <img src="https://user-images.githubusercontent.com/12682046/166830486-349c0bfd-688f-4219-9405-855be94ce52e.jpg" width="300" alt="Pedal externals" />
   <img src="https://user-images.githubusercontent.com/12682046/166830256-3dd194d0-3b77-40a5-a1a9-1d1ff3e3b783.jpg" width="300" alt="Pedal guts"/>
 </span>
@@ -28,7 +28,7 @@ The implementation currently provides these modes:
 
 
 ### Hardware
-``
+
 - [Wiring diagram here](./wiring-diagram.svg)
 - Arduino Nano clone
 - 3 momentary buttons
@@ -38,12 +38,43 @@ The implementation currently provides these modes:
 - A few resistors, wire, case, etc.
 ``
 
-### Configuration `config.h`
+## Configuration `config.h`
 
-- **Important**: Ensure that `LED_COMMON_PIN` is set correctly (`LED_COMMON_ANODE`|`LED_COMMON_CATHODE`) to match your hardware.
+The following values must be set correctly or your pedal will not work!
+
+### `LED_COMMON_PIN`
+
+Set to `LED_COMMON_CATHODE` if your LED has a common cathode.  
+Set to `LED_COMMON_ANODE` if your LED has a common anode.
+
+### `PEDAL_HARDWARE`
+
+Must match the model of the Whammy you are connecting to.
+
+Set to `WHAMMY_IV` if connecting to a Whammy IV.  
+Set to `WHAMMY_DT` if connecting to a Whammy DT.
+
+Other whammy models may also work but will need to have their MIDI configurations
+added - contact me if you want a particular pedal to be supported and I'll try and add it.
+
+### `PIN_...`
+
+All values with the `PIN_` prefix must correctly match the Arduino pins that you
+wire the LED and controls.
 
 
-### Controls
+### Options
+
+All other settings in `config.h` have default values which you can edit to your preference:
+
+- `MAX_BRIGHTNESS`
+- `MAX_TEMPO`
+- `MIN_TEMPO`
+- `DEFAULT_PATCH`
+- `DEFAULT_POSTION`
+
+
+## Controls
 
 **On/off**: activate the pedal.  
 **Modifier + On/off**: Toggle between momentary and latching activation. Momentary/latching mode persists in EEPROM between sessions so you don't need to change it every time.
@@ -59,7 +90,16 @@ The implementation currently provides these modes:
 In all modes, the LED brightness indicates the effective position of the pedal - brighter means toe-down, darker means heel-down.
 
 
-### monitor.pd
+## Troubleshooting
+
+A couple of things to check if the pedal isn't working as expected:
+- Check the [Configuration](#configuration-configh) section and ensure that all values correctly match your hardware.
+- Check the MIDI settings on your Whammy pedal and ensure it is listening on channel one. If you're not sure, set your Whammy channel to 'omni' so it listens on all MIDI channels.  
+  On the Whammy IV this is done by holding down the footswitch while powering the pedal on. A light should start flashing beside one of the modes - rotate the knob until the light moves to the top left (Harmony Octave Up/Down) setting. Press the footswitch again to confirm.  
+  Other models may work differently - check the manual for your particular Whammy version.
+
+
+## monitor.pd
 
 If you want to work on this project without going mad from constant
 atonal wee-woo noises, open `monitor.pd` with
