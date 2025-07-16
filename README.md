@@ -27,7 +27,7 @@ The implementation currently provides these modes:
 - 'Chaos' (LED cyan): random selection from the above modes.
 
 
-### Hardware
+## Hardware
 
 - [Wiring diagram here](./wiring-diagram.svg)
 - Arduino Nano clone
@@ -36,7 +36,7 @@ The implementation currently provides these modes:
 - MIDI port
 - RGB LED
 - A few resistors, wire, case, etc.
-``
+
 
 ## Configuration `config.h`
 
@@ -111,3 +111,4 @@ MIDI messages instead.
 ---
 
 This project kept me busy while isolating with Covid 19 in April 2022. The illness provided some gnarly headaches and this project did not help with that whatsoever. Fun though.
+``
